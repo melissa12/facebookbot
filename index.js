@@ -7,11 +7,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.listen((process.env.PORT || 3000)); 
 
-app.get('/webhook', function (req, res){
+app.get('/', function (req, res){
 	res.send('This is a TestBot');
 });
 
-app.get('/webhook', function (req, res){
+app.get('/', function (req, res){
 	if (req.query['hub.verify_token'] === 'testbot_verify_token'){
 	res.send(req.query['hub.challenge']);
 	} else {
