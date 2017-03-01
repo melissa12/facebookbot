@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.listen((process.env.PORT || 3000)); 
 
-app.get('/', function (req, res){
+app.get('/webhook', function (req, res){
 	res.send('This is a TestBot');
 });
 
