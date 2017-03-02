@@ -37,7 +37,7 @@ function sendMessage(recipientID, message) {
 		qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
 		method: 'POST',
 		json: {
-			recipient: {id: recipientID},
+			recipient: {id: recipientId},
 			message: message, 
 		}
 	}, function(error, response, body) {
