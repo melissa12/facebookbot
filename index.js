@@ -58,17 +58,20 @@ function imageMessage(recipientId, text) {
     var imageUrl = "http://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630/triceratops_profile_o9rbze.jpg"; 
     message = {
         "attachment": {
-            "type": "catalogue",
-            "elements": [{
-                "title": "One", 
-                "subtitle": "...",
-                "imgurl": imageUrl 
-                }, 
-              {
-                  "title": "2", 
-                  "subtitle": "...", 
-                  "imgurl": imageUrl, 
-              }]
+            "type": "template",
+            "payload": {
+                "template_type": "carousel", 
+                "elements": [{
+                    "title": "One", 
+                    "subtitle": "...",
+                    "img_url": imageUrl 
+                    }, 
+                    {
+                        "title": "Two", 
+                        "subtitle": "...", 
+                        "img_url": imageUrl, 
+                    }]
+                }
         }
     };
         sendMessage(recipientId, message);
