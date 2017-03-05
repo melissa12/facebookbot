@@ -67,8 +67,20 @@ function imageMessage(recipientId, text) {
                     "image_url": imageUrl
                      },
                     
-                    {
+                                        {
                     "title": "Two", 
+                    "subtitle": "blah", 
+                    "image_url": imageUrl
+                     },
+                    
+                                        {
+                    "title": "Three", 
+                    "subtitle": "blah", 
+                    "image_url": imageUrl
+                     },
+                    
+                    {
+                    "title": "Four", 
                         "subtitle": "blah", 
                         "image_url": imageUrl
                     }
