@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');  
 var request = require('request');  
 var app = express();
+var MessengerPlatform = require('facebook-bot-messenger');
 
 app.use(bodyParser.urlencoded({extended: false}));  
 app.use(bodyParser.json());  
@@ -29,7 +30,12 @@ app.post('/webhook', function (req, res) {
             sendMessage(event.sender.id, {text: "Directions"});
         }
         else if (event.message && event.message.text === "Hello"){
-            sendMessage(event.sender.id, {text: "Blah"}); 
+            sendMessage(event.sender.id, var element1 = new MessengerPlatform.ListElementTemplateBuilder('Turn Left', 'http://feelgrafix.com/group/images.html')
+            var template = new ListTemplate();
+            template.isLargeTopElement(true)
+            .addElement(element1)
+            var builder = new MessengerPlatform.AttachmentMessageBuilder(template);
+            ); 
         }
     }
     res.sendStatus(200);
