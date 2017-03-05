@@ -59,12 +59,20 @@ function imageMessage(recipientId, text) {
         "attachment": {
             "type": "template",
             "payload": { 
-                "template_type": "generic", 
-                "elements": [{
-                    "title": "Left", 
+                "template_type": "list", 
+                "elements": [
+                    {
+                    "title": "One", 
                     "subtitle": "blah", 
-                    "image_url": imageUrl,
-                }]
+                    "image_url": imageUrl
+                     },
+                    
+                    {
+                    "title": "Two", 
+                        "subtitle": "blah", 
+                        "image_url": imageUrl
+                    }
+                ]
             }
         }
     };
