@@ -55,19 +55,24 @@ function sendMessage(recipientId, message) {
 
 
 function imageMessage(recipientId, text) { 
-    "type": "catalogue",
-    "msgid": "1", 
-    "items": [{
-        "title": "One", 
-        "subtitle": "...",
-        "imgurl": "http://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630/triceratops_profile_o9rbze.jpg", 
-    }, 
+    var imageUrl = "http://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630/triceratops_profile_o9rbze.jpg"; 
+    message = {
+        "attachment": {
+            "type": "catalogue",
+            "elements": [{
+                "title": "One", 
+                "subtitle": "...",
+                "imgurl": imageUrl 
+                }, 
               {
                   "title": "2", 
                   "subtitle": "...", 
-                  "imgurl": "http://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630/triceratops_profile_o9rbze.jpg", 
+                  "imgurl": imageUrl, 
               }]
+        }
+    };
         sendMessage(recipientId, message);
 };
+
 
 
