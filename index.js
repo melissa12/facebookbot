@@ -29,6 +29,7 @@ app.post('/webhook', function (req, res) {
         }
         else if (event.message && event.message.text === "Hello") { 
             imageMessage(event.sender.id, {text: "Here"});
+            imageMessage(event.sender.id, {text: "Here"});
         }
     }
     res.sendStatus(200);
