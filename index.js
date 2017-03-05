@@ -60,6 +60,7 @@ function imageMessage(recipientId, text) {
             "type": "template",
             "payload": { 
                 "template_type": "list", 
+                "top_element_style": "compact",
                 "elements": [
                     {
                     "title": "One", 
