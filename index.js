@@ -30,12 +30,7 @@ app.post('/webhook', function (req, res) {
             sendMessage(event.sender.id, {text: "Directions"});
         }
         else if (event.message && event.message.text === "Hello"){
-            sendMessage(event.sender.id, var element1 = new MessengerPlatform.ListElementTemplateBuilder('Turn Left', 'http://feelgrafix.com/group/images.html')
-            var template = new ListTemplate();
-            template.isLargeTopElement(true)
-            .addElement(element1)
-            var builder = new MessengerPlatform.AttachmentMessageBuilder(template);
-            ); 
+            sendMessage(event.sender.id, {text: "Blah"});
         }
     }
     res.sendStatus(200);
