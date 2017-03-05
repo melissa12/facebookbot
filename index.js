@@ -30,7 +30,11 @@ app.post('/webhook', function (req, res) {
             sendMessage(event.sender.id, {text: "Directions"});
         }
         else if (event.message && event.message.text === "Hello") { 
-            getCardsAttachments(event.sender.id, {text: "Here"});
+            var cards = getCardsAttachments();
+            var reply = new builder.Message(session)
+            .attachmentLayout(builder.AttachmentLayout.carousel)
+            .attachments(cards);
+            session.send(reply);
         }
     }
     res.sendStatus(200);
