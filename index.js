@@ -21,7 +21,6 @@ app.get('/webhook', function (req, res) {
         res.send('Invalid verify token');
     }
 });
-
 app.post('/webhook', function (req, res) {  
     var events = req.body.entry[0].messaging;
     for (i = 0; i < events.length; i++) {
@@ -30,15 +29,12 @@ app.post('/webhook', function (req, res) {
             sendMessage(event.sender.id, {text: "Directions"});
         }
         else if (event.message && event.message.text === "Hello") { 
-            var cards = getCardsAttachments();
-            var reply = new builder.Message(session)
-            .attachmentLayout(builder.AttachmentLayout.carousel)
-            .attachments(cards);
-            session.send(reply);
+            imageMessage(event.sender.id, {text: "Here"});
         }
     }
     res.sendStatus(200);
 });
+
 
 function sendMessage(recipientId, message) {  
     request({
@@ -58,23 +54,22 @@ function sendMessage(recipientId, message) {
     });
 };
 
-function getCardsAttachments(session) { 
-    return [
-        new builder.FirstCard(session)
-        .title('One')
-        .subtitle('blah')
-        .text('dfg')
-        .images([
-            builder.CardImage.create(session, 'http://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630/triceratops_profile_o9rbze.jpg')
-            ]),
-        new builder.SecondCard(session)
-        .title('Two')
-        .subtitle('blah')
-        .text('fgg')
-        .images([
-            builder.CardImage.create(session, 'http://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630/triceratops_profile_o9rbze.jpg')
-            ])
-        ];
-}
-        
+function imageMessage(recipientId, text) { 
+    var imageUrl = "http://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630/triceratops_profile_o9rbze.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "generic", 
+                "elements": [{
+                    "title": "Left", 
+                    "subtitle": "blah", 
+                    "image_url": imageUrl,
+                }]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
 
