@@ -55,27 +55,19 @@ function sendMessage(recipientId, message) {
 
 
 function imageMessage(recipientId, text) { 
-    var imageUrl = "http://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630/triceratops_profile_o9rbze.jpg"; 
-    message = {
+    var imageUrl = "http://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630/triceratops_profile_o9rbze.jpg";
+    message = { 
         "attachment": {
             "type": "template",
-            "payload": {
-                "template_type": "carousel", 
+            "payload": { 
+                "template_type": "generic", 
                 "elements": [{
-                    "title": "One", 
-                    "subtitle": "...",
-                    "img_url": imageUrl 
-                    }, 
-                    {
-                        "title": "Two", 
-                        "subtitle": "...", 
-                        "img_url": imageUrl, 
-                    }]
-                }
+                    "title": "Left", 
+                    "subtitle": "blah", 
+                    "image_url": imageUrl,
+                }]
+            }
         }
     };
-        sendMessage(recipientId, message);
+    sendMessage(recipientId, message);
 };
-
-
-
