@@ -67,6 +67,7 @@ function imageMessage(recipientId, text) {
                   "subtitle": "...", 
                   "imgurl": "http://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630/triceratops_profile_o9rbze.jpg", 
               }]
+        sendMessage(recipientId, message);
 };
 
 
