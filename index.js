@@ -55,7 +55,7 @@ function sendMessage(recipientId, message) {
 };
 
 function imageMessage(recipientId, text) { 
-    var imageUrl = "https://www.facebook.com/photo.php?fbid=10212304824478573&set=pcb.10212304827838657&type=3&theater";
+    var imageUrl = "https://www.instagram.com/p/BRBqKFOB8Tv/?taken-by=melissawhiting&hl=en";
     message = { 
         "attachment": {
             "type": "template",
