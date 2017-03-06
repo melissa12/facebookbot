@@ -55,7 +55,7 @@ function sendMessage(recipientId, message) {
 };
 
 function imageMessage(recipientId, text) { 
-    var imageUrl = "https://www.instagram.com/p/BROH0OxB-Zs/?hl=en";
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
         "attachment": {
             "type": "template",
