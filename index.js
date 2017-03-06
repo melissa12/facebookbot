@@ -55,7 +55,7 @@ function sendMessage(recipientId, message) {
 };
 
 function imageMessage(recipientId, text) { 
-    var imageUrl = "DSC_0593.jpg";
+    var imageUrl = "https://project.cs.cf.ac.uk/WhitingM/DSC_0593.JPG";
     message = { 
         "attachment": {
             "type": "template",
