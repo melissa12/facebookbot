@@ -28,7 +28,7 @@ app.post('/webhook', function (req, res) {
             sendMessage(event.sender.id, {text: "Directions"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to the toilet") {
-            imageMessage(event.sender.id, {text: "Here"}); 
+            canteenToilet(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.09") {
             imageMessageTwo(event.sender.id, {text: "Here"}); 
@@ -57,7 +57,7 @@ function sendMessage(recipientId, message) {
 };
 
 
-function imageMessage(recipientId, text) { 
+function canteenToilet(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
         "attachment": {
