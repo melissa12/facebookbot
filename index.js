@@ -27,8 +27,8 @@ app.post('/webhook', function (req, res) {
         if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.07"){
             sendMessage(event.sender.id, {text: "Directions"});
         }
-        else if (event.message && event.message.text === "Hello") { 
-            imageMessage(event.sender.id, {text: "Here"});
+        else if (event.message && event.message.text === "I am at the canteen and I want to go to the toilet") { 
+            canteenToilet(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "Blah") {
             imageMessageTwo(event.sender.id, {text: "Here"}); 
@@ -59,7 +59,7 @@ function sendMessage(recipientId, message) {
     });
 };
 
-function imageMessage(recipientId, text) { 
+function canteenToilet(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
         "attachment": {
@@ -69,27 +69,9 @@ function imageMessage(recipientId, text) {
                 "top_element_style": "compact",
                 "elements": [
                     {
-                    "title": "One", 
-                    "subtitle": "blah", 
+                    "title": "Walk towards the JCR and turn right.", 
+                    "subtitle": "The toilets are just on your left", 
                     "image_url": imageUrl
-                     },
-                    
-                                        {
-                    "title": "Two", 
-                    "subtitle": "blah", 
-                    "image_url": imageUrl
-                     },
-                    
-                                        {
-                    "title": "Three", 
-                    "subtitle": "blah", 
-                    "image_url": imageUrl
-                     },
-                    
-                    {
-                    "title": "Four", 
-                        "subtitle": "blah", 
-                        "image_url": imageUrl
                     }
                 ]
             }
