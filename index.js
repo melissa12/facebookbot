@@ -27,12 +27,12 @@ app.post('/webhook', function (req, res) {
         if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.07"){
             sendMessage(event.sender.id, {text: "Directions"});
         }
+        else if (event.message && event.message.text === "I am at the canteen and I want to go to the Toilet") { 
+            canteenToilets(event.sender.id, {text: "Here"});
+        }
         else if (event.message && event.message.text === "Hello") { 
             imageMessage(event.sender.id, {text: "Here"});
             imageMessage(event.sender.id, {text: "Here"});
-        }
-        else if (event.message && event.message.text === "I am at the canteen and I want to go to the Toilet") { 
-            canteenToilets(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to T2.07") { 
             canteenT207(event.sender.id, {text: "Here"});
