@@ -30,6 +30,9 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.08") {
             imageMessage(event.sender.id, {text: "Here"}); 
         }
+        else if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.09") {
+            imageMessageTwo(event.sender.id, {text: "Here"}); 
+        }
     }
     res.sendStatus(200);
 });
@@ -93,4 +96,41 @@ function imageMessage(recipientId, text) {
     sendMessage(recipientId, message);
 };
 
-
+function imageMessageTwo(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "One", 
+                    "subtitle": "blah", 
+                    "image_url": imageUrl
+                     },
+                    
+                                        {
+                    "title": "Two", 
+                    "subtitle": "blah", 
+                    "image_url": imageUrl
+                     },
+                    
+                                        {
+                    "title": "Three", 
+                    "subtitle": "blah", 
+                    "image_url": imageUrl
+                     },
+                    
+                    {
+                    "title": "Four", 
+                        "subtitle": "blah", 
+                        "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
