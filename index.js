@@ -119,6 +119,7 @@ function imageMessage(recipientId, text) {
 
 
 function canteenToilets(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
         "attachment": {
             "type": "template",
@@ -127,7 +128,9 @@ function canteenToilets(recipientId, text) {
                 "top_element_style": "compact",
                 "elements": [
                     {
-                    "title": "Walk towards the JCR and turn right. The toilets are just on your left."
+                    "title": "Walk towards the JCR and turn right. The toilets are just on your left.",
+                    "subtitle": ""
+                    "image_url": imageUrl
                      }
                 ]
             }
