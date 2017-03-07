@@ -127,7 +127,7 @@ function canteenToilets(recipientId, text) {
                 "top_element_style": "compact",
                 "elements": [
                     {
-                    "subtitle": "Walk towards the JCR and turn right. The toilets are just on your left."
+                    "title": "Walk towards the JCR and turn right. The toilets are just on your left."
                      }
                 ]
             }
