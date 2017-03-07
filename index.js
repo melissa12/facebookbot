@@ -31,9 +31,6 @@ app.post('/webhook', function (req, res) {
             imageMessage(event.sender.id, {text: "Here"});
             imageMessage(event.sender.id, {text: "Here"});
         }
-        else if (event.message && event.message.text === "Blah") { 
-            canteenToilets(event.sender.id, {text: "Here"});
-        }
     }
     res.sendStatus(200);
 });
