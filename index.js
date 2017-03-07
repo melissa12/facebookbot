@@ -67,12 +67,12 @@ function imageMessage(recipientId, text) {
                 "top_element_style": "compact",
                 "elements": [
                     {
-                    "subtitle": "Walk towards the JCR and turn right",  
+                    "title": "Walk towards the JCR and turn right",  
                     "image_url": imageUrl
                      },
                     
                                         {
-                    "subtitle": "The toilets are just on your left",  
+                    "title": "The toilets are just on your left",  
                     "image_url": imageUrl
                      }
                 ]
