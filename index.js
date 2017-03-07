@@ -27,7 +27,7 @@ app.post('/webhook', function (req, res) {
         if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.07"){
             sendMessage(event.sender.id, {text: "Directions"});
         }
-        else if (event.message && event.message.text === "I") {
+        else if (event.message && event.message.text === "i") {
             canteenToilet(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "Blah") {
