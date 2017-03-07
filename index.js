@@ -43,7 +43,7 @@ app.post('/webhook', function (req, res) {
             canteenC204A(event.sender.id, {text: "Here"}); 
             canteenC204B(event.sender.id, {text: "Here"});
         }
-        else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.04") {
+        else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.07") {
             canteenC207A(event.sender.id, {text: "Here"}); 
             canteenC207B(event.sender.id, {text: "Here"});
         }
