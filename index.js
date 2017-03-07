@@ -33,6 +33,9 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at the canteen and I want to go to T2.07") {
             canteenT207(event.sender.id, {text: "Here"}); 
         }
+        else if (event.message && event.message.text === "I am at the canteen and I want to go to the library") {
+            canteenLibrary(event.sender.id, {text: "Here"}); 
+        }
     }
     res.sendStatus(200);
 });
@@ -67,12 +70,12 @@ function canteenToilet(recipientId, text) {
                 "top_element_style": "compact",
                 "elements": [
                     {
-                    "title": "Walk towards the JCR and turn right",  
+                    "title": "Walk towards the JCR and turn right.",  
                     "image_url": imageUrl
                      },
                     
                                         {
-                    "title": "The toilets are just on your left",  
+                    "title": "The toilets are just on your left.",  
                     "image_url": imageUrl
                      }
                 ]
@@ -98,19 +101,47 @@ function canteenT207(recipientId, text) {
                      },
                     
                                         {
-                    "title": "Go through the door in front of you",  
+                    "title": "Go through the door in front of you.",  
                     "image_url": imageUrl
                      },
                     
                                         {
-                    "title": "Walk along the corridor",  
+                    "title": "Walk along the corridor.",  
                     "image_url": imageUrl
                      },
                     
                     {
-                    "title": "It's the second door on your right",  
+                    "title": "It's the second door on your right.",  
                         "image_url": imageUrl
                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function canteenLibrary(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Take the stairs that are in front of you.",
+                    "subtitle": "Go up 2 flights.",  
+                    "image_url": imageUrl
+                     },
+                    
+                                        {
+                    "title": "Go through the door to the right of you.",  
+                    "subtitle": "This is the library.",       
+                    "image_url": imageUrl
+                     }                 
                 ]
             }
         }
