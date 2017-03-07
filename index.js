@@ -92,7 +92,8 @@ function canteenT207(recipientId, text) {
                 "top_element_style": "compact",
                 "elements": [
                     {
-                    "title": "Take the stairs that are just in front of you. Go up 4 flights.",  
+                    "title": "Take the stairs that are in front of you.",
+                    "subtitle": "Go up 4 flights.",  
                     "image_url": imageUrl
                      },
                     
