@@ -27,7 +27,7 @@ app.post('/webhook', function (req, res) {
         if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.07"){
             sendMessage(event.sender.id, {text: "Directions"});
         }
-        else if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.08") {
+        else if (event.message && event.message.text === "I am at the canteen and I want to go to the toilet") {
             imageMessage(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.09") {
@@ -67,28 +67,14 @@ function imageMessage(recipientId, text) {
                 "top_element_style": "compact",
                 "elements": [
                     {
-                    "title": "One", 
-                    "subtitle": "blah", 
+                    "title": "Walk towards the JCR and turn right",  
                     "image_url": imageUrl
                      },
                     
                                         {
-                    "title": "Two", 
-                    "subtitle": "blah", 
+                    "title": "The toilets are just on your left",  
                     "image_url": imageUrl
-                     },
-                    
-                                        {
-                    "title": "Three", 
-                    "subtitle": "blah", 
-                    "image_url": imageUrl
-                     },
-                    
-                    {
-                    "title": "Four", 
-                        "subtitle": "blah", 
-                        "image_url": imageUrl
-                    }
+                     }
                 ]
             }
         }
