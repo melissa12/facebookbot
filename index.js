@@ -30,8 +30,8 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at the canteen and I want to go to the toilet") {
             canteenToilet(event.sender.id, {text: "Here"}); 
         }
-        else if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.09") {
-            imageMessageTwo(event.sender.id, {text: "Here"}); 
+        else if (event.message && event.message.text === "I am at the canteen and I want to go to T2.07") {
+            canteenT207(event.sender.id, {text: "Here"}); 
         }
     }
     res.sendStatus(200);
@@ -82,7 +82,7 @@ function canteenToilet(recipientId, text) {
     sendMessage(recipientId, message);
 };
 
-function imageMessageTwo(recipientId, text) { 
+function canteenT207(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
         "attachment": {
@@ -92,26 +92,22 @@ function imageMessageTwo(recipientId, text) {
                 "top_element_style": "compact",
                 "elements": [
                     {
-                    "title": "One", 
-                    "subtitle": "blah", 
+                    "title": "Take the stairs that are just in front of you. Go up 4 flights.",  
                     "image_url": imageUrl
                      },
                     
                                         {
-                    "title": "Two", 
-                    "subtitle": "blah", 
+                    "title": "Go through the door in front of you",  
                     "image_url": imageUrl
                      },
                     
                                         {
-                    "title": "Three", 
-                    "subtitle": "blah", 
+                    "title": "Walk along the corridor",  
                     "image_url": imageUrl
                      },
                     
                     {
-                    "title": "Four", 
-                        "subtitle": "blah", 
+                    "title": "It's the second door on your right",  
                         "image_url": imageUrl
                     }
                 ]
