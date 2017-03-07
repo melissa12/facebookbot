@@ -183,30 +183,6 @@ function canteenT209(recipientId, text) {
     sendMessage(recipientId, message);
 };
 
-function canteenC204B(recipientId, text) { 
-    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
-    message = { 
-        "attachment": {
-            "type": "template",
-            "payload": { 
-                "template_type": "list", 
-                "top_element_style": "compact",
-                "elements": [
-                    {
-                    "title": "Walk along this corridor.",
-                    "image_url": imageUrl
-                     },
-                    
-                                        {
-                    "title": "It's the fourth door on your left.",         
-                    "image_url": imageUrl
-                                        }
-                ]
-            }
-        }
-    };
-    sendMessage(recipientId, message);
-};
 
 function canteenC204A(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
@@ -238,6 +214,33 @@ function canteenC204A(recipientId, text) {
                     "title": "Turn right and right again.",
                     "image_url": imageUrl
                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+
+function canteenC204B(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Walk along this corridor.",
+                    "image_url": imageUrl
+                     },
+                    
+                                        {
+                    "title": "It's the fourth door on your left.",         
+                    "image_url": imageUrl
+                                        }
                 ]
             }
         }
