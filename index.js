@@ -903,16 +903,16 @@ function libraryS222A(recipientId, text) {
                     "subtitle:" "Go up 1 flight.",
                     "image_url": imageUrl
                      },
-                                        {
+                     {
                     "title": "Turn right and walk along the corridor",
                     "image_url": imageUrl
                      },
-                                                            {
+                     {
                     "title": "At the end of the corridor take the stairs.",
                     "subtitle": "Go up 2 flights.", 
                     "image_url": imageUrl
                      },
-                                                            {
+                     {
                     "title": "Turn right and right again.",
                     "image_url": imageUrl
                      }
@@ -936,16 +936,16 @@ function libraryS222B(recipientId, text) {
                     "title": "At the end of the corridor turn right.",
                     "image_url": imageUrl
                      },
-                                        {
+                     {
                     "title": "Turn left and take the stairs",
                     "subtitle": "Go up 1 flight.", 
                     "image_url": imageUrl
                      },
-                                                            {
+                     {
                     "title": "Go down the stairs until you reach the second floor.",
                     "image_url": imageUrl
                      },
-                                                            {
+                     {
                     "title": "Walk along this corridor.",
                     "subtitle": "It's the second door on your right.",
                     "image_url": imageUrl
