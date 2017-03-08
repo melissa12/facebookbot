@@ -789,10 +789,11 @@ function libraryS132B(recipientId, text) {
                      },
                                                             {
                     "title": "Go down the stairs to the first floor.",
+                    "subtitle": "Walk along the corridor.", 
                     "image_url": imageUrl
                      },
                                                             {
-                    "title": "Walk along the corridor, take the second right.",
+                    "title": "Take the second right.",
                     "subtitle": "The door is just on your right.", 
                     "image_url": imageUrl
                      }
