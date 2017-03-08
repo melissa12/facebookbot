@@ -95,6 +95,7 @@ app.post('/webhook', function (req, res) {
             libraryS221A(event.sender.id, {text: "Here"}); 
             libraryS221B(event.sender.id, {text: "Here"}); 
         }
+        /*
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to the toilet") {
             S221Toilet(event.sender.id, {text: "Here"}); 
         }
@@ -133,6 +134,7 @@ app.post('/webhook', function (req, res) {
             S221C204A(event.sender.id, {text: "Here"}); 
             S221C204B(event.sender.id, {text: "Here"});
         }
+                    */
     }
     res.sendStatus(200);
 });
@@ -1134,7 +1136,7 @@ function libraryS221B(recipientId, text) {
     };
     sendMessage(recipientId, message);
 };
-
+/*
 function S221Toilet(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
@@ -1702,3 +1704,4 @@ function S221C204B(recipientId, text) {
     };
     sendMessage(recipientId, message);
 };
+*/
