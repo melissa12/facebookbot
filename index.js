@@ -63,6 +63,18 @@ app.post('/webhook', function (req, res) {
             canteenS221B(event.sender.id, {text: "Here"}); 
             canteenS221C(event.sender.id, {text: "Here"}); 
         }
+        else if (event.message && event.message.text === "I am at the library and I want to go to the canteen") {
+            libraryCanteen(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at the library and I want to go to the toilet") {
+            libraryToilet(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at the library and I want to go to T2.07") {
+            libraryT207(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at the library and I want to go to S1.32") {
+            libraryS132(event.sender.id, {text: "Here"}); 
+        }
     }
     res.sendStatus(200);
 });
@@ -617,6 +629,158 @@ function canteenS221C(recipientId, text) {
                     {
                     "title": "Turn left.",
                     "subtitle": "The door is the first door on your left.",
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+function libraryCanteen(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you exit the library turn left and take the stairs.",
+                    "subtitle": "Go down 2 flights.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "The canteen is just on your right.",
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+function libraryToilet(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you exit the library turn left and take the stairs.",
+                    "subtitle": "Go down 2 flights.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Walk towards the JCR and turn right.",
+                    "subtitle": "The toilets are just on your left.",
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+function libraryT207(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you exit the library take the stairs.",
+                    "subtitle": "Go up 2 flights.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Go through the door in front of you.",
+                    "image_url": imageUrl
+                     },
+                                                            {
+                    "title": "Walk along this corridor.",
+                    "image_url": imageUrl
+                     },
+                                                            {
+                    "title": "It's the second door on your right.",
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+function libraryS132A(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you exit the library take the stairs.",
+                    "subtitle": "Go up 1 flight.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn right and walk along the corridor.",
+                    "image_url": imageUrl
+                     },
+                                                            {
+                    "title": "At the end of the corridor take the stairs.",
+                    "subtitle": "Go up 2 flights.",
+                    "image_url": imageUrl
+                     },
+                                                            {
+                    "title": "Turn right and right again.",
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+function libraryS132B(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "At the end of the corridor turn right.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn left and take the stairs",
+                    "subtitle": "Go up 1 flight.",
+                    "image_url": imageUrl
+                     },
+                                                            {
+                    "title": "Go down the stairs to the first floor.",
+                    "image_url": imageUrl
+                     },
+                                                            {
+                    "title": "Walk along this corridor and take the second right.",
+                    "subtitle": "The door is just on your right.", 
                     "image_url": imageUrl
                      }
                 ]
