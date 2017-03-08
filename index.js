@@ -688,9 +688,13 @@ function canteenS221C(recipientId, text) {
                 "elements": [
                     {
                     "title": "Turn left.",
-                    "subtitle": "The door is the first door on your left.",
                     "image_url": imageUrl
-                     }
+                     },
+                    
+                    {
+                    "title": "The door is the first door on your left.",
+                    "image_url": imageUrl
+                    }
                 ]
             }
         }
