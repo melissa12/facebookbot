@@ -83,11 +83,11 @@ app.post('/webhook', function (req, res) {
             libraryS222A(event.sender.id, {text: "Here"}); 
             libraryS222B(event.sender.id, {text: "Here"}); 
         }
+        /*
         else if (event.message && event.message.text === "I am at the library and I want to go to C2.04") {
             libraryC204A(event.sender.id, {text: "Here"}); 
             libraryC204B(event.sender.id, {text: "Here"}); 
         }
-        /*
         else if (event.message && event.message.text === "I am at the library and I want to go to C2.07") {
             libraryC207A(event.sender.id, {text: "Here"}); 
             libraryC207B(event.sender.id, {text: "Here"}); 
@@ -956,7 +956,7 @@ function libraryS222B(recipientId, text) {
     };
     sendMessage(recipientId, message);
 };
-
+/*
 function libraryC204A(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
@@ -1014,7 +1014,7 @@ function libraryC204B(recipientId, text) {
     };
     sendMessage(recipientId, message);
 };
-/*
+
 function libraryC207A(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
