@@ -2,6 +2,11 @@ var express = require('express');
 var bodyParser = require('body-parser');  
 var request = require('request');  
 var app = express();
+var wait = require('wait.for');
+
+wait.seconds = function(s){
+    wait.for(s);
+};
 
 app.use(bodyParser.urlencoded({extended: false}));  
 app.use(bodyParser.json());  
@@ -45,6 +50,7 @@ app.post('/webhook', function (req, res) {
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.07") {
             canteenC207A(event.sender.id, {text: "Here"}); 
+            wait.seconds(1);
             canteenC207B(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S1.32") {
