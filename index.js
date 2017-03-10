@@ -41,27 +41,27 @@ app.post('/webhook', function (req, res) {
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.04") {
             canteenC204A(event.sender.id, {text: "Here"}); 
-            canteenC204B(event.sender.id, {text: "Here"});
+            sleep(3000, canteenC204B(event.sender.id, {text: "Here"}));
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.07") {
             canteenC207A(event.sender.id, {text: "Here"}); 
-            canteenC207B(event.sender.id, {text: "Here"});
+            sleep(3000, canteenC207B(event.sender.id, {text: "Here"}));
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S1.32") {
             canteenS132A(event.sender.id, {text: "Here"}); 
-            canteenS132B(event.sender.id, {text: "Here"});
+            sleep(3000, canteenS132B(event.sender.id, {text: "Here"}));
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.22") {
             canteenS222A(event.sender.id, {text: "Here"}); 
-            setTimeout(canteenS222B(event.sender.id, {text: "Here"}), 3000);
+            sleep(3000, canteenS222B(event.sender.id, {text: "Here"}));
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to N4.07") {
             canteenN407(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.21") {
             canteenS221A(event.sender.id, {text: "Here"}); 
-            canteenS221B(event.sender.id, {text: "Here"}); 
-            canteenS221C(event.sender.id, {text: "Here"}); 
+            sleep(3000, canteenS221B(event.sender.id, {text: "Here"})); 
+            sleep(3000, canteenS221C(event.sender.id, {text: "Here"})); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to the canteen") {
             libraryCanteen(event.sender.id, {text: "Here"}); 
@@ -74,14 +74,14 @@ app.post('/webhook', function (req, res) {
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to S1.32") {
             libraryS132A(event.sender.id, {text: "Here"}); 
-            libraryS132B(event.sender.id, {text: "Here"});
+            sleep(3000, libraryS132B(event.sender.id, {text: "Here"}));
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to N4.07") {
             libraryN407(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to S2.22") { 
             libraryS222A(event.sender.id, {text: "Here"}); 
-            libraryS222B(event.sender.id, {text: "Here"}); 
+            sleep(3000, libraryS222B(event.sender.id, {text: "Here"})); 
         }
 
         
@@ -89,7 +89,13 @@ app.post('/webhook', function (req, res) {
     res.sendStatus(200);
 });
 
-
+function sleep(time, callback) {
+    var stop = new Date().getTime(); 
+    while (new Date().getTime() < stop + time) { 
+        ;
+    }
+    callback();
+}
 function sendMessage(recipientId, message) {  
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
