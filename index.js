@@ -45,15 +45,15 @@ app.post('/webhook', function (req, res) {
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.07") {
             canteenC207A(event.sender.id, {text: "Here"}); 
-            setTimeout(canteenC207B(event.sender.id, {text: "Here"}), 1000);
+            setTimeout(canteenC207B(event.sender.id, {text: "Here"}), 3000);
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S1.32") {
             canteenS132A(event.sender.id, {text: "Here"}); 
-            setTimeout(canteenS132B(event.sender.id, {text: "Here"}), 1000);
+            setTimeout(canteenS132B(event.sender.id, {text: "Here"}), 3000);
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.22") {
             canteenS222A(event.sender.id, {text: "Here"}); 
-            setTimeout(canteenS222B(event.sender.id, {text: "Here"}), 1000);
+            setTimeout(canteenS222B(event.sender.id, {text: "Here"}), 3000);
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to N4.07") {
             canteenN407(event.sender.id, {text: "Here"}); 
