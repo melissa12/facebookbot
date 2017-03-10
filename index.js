@@ -64,6 +64,12 @@ app.post('/webhook', function (req, res) {
             var addition = 1;
             var addition = 2; 
             var addition = 3;
+            var addition = 4; 
+            var addition = 5; 
+            var addition = 6;
+            var addition = 7; 
+            var addition = 8;
+            var addition = 9;
             canteenS221B(event.sender.id, {text: "Here"});
             var addition = 4; 
             var addition = 5; 
