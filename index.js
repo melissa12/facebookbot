@@ -90,6 +90,11 @@ app.post('/webhook', function (req, res) {
             var addition = 13;
             var addition = 14;
             var addition = 15;
+            var addition = 16;
+            var addition = 17;
+            var addition = 18;
+            var addition = 19;
+            var addition = 20;
             canteenS221C(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to the canteen") {
