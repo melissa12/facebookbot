@@ -54,6 +54,7 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.22") {
             canteenS222A(event.sender.id, {text: "Here"}); 
             canteenS222B(event.sender.id, {text: "Here"});
+            canteenS222C(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to N4.07") {
             canteenN407(event.sender.id, {text: "Here"}); 
@@ -308,18 +309,7 @@ function canteenC207A(recipientId, text) {
                                         {
                     "title": "Turn right and walk along the corridor.",         
                     "image_url": imageUrl
-                                        },
-                    
-                                        {
-                    "title": "At the end of the corridor take the stairs.", 
-                    "subtitle": "Go up 2 flights.",
-                    "image_url": imageUrl
-                                        },
-                    
-                                        {
-                    "title": "Turn right and right again.", 
-                    "image_url": imageUrl
-                                        },
+                                        }
                 ]
             }
         }
@@ -336,7 +326,17 @@ function canteenC207B(recipientId, text) {
             "payload": { 
                 "template_type": "list", 
                 "top_element_style": "compact",
-                "elements": [
+                "elements": [ 
+                                        {
+                    "title": "At the end of the corridor take the stairs.", 
+                    "subtitle": "Go up 2 flights.",
+                    "image_url": imageUrl
+                                        },
+                    
+                                        {
+                    "title": "Turn right and right again.", 
+                    "image_url": imageUrl
+                                        },
                     {
                     "title": "Walk along this corridor.",
                     "image_url": imageUrl
@@ -450,8 +450,24 @@ function canteenS222A(recipientId, text) {
                                         {
                     "title": "Turn right and walk along the corridor.", 
                     "image_url": imageUrl
-                                        },
-                    
+                                        }
+
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+function canteenS222B(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
                                         {
                     "title": "At the end of the corridor take the stairs.",
                     "subtitle": "Go up 2 flights.",
@@ -470,9 +486,7 @@ function canteenS222A(recipientId, text) {
     sendMessage(recipientId, message);
 };
 
-
-
-function canteenS222B(recipientId, text) { 
+function canteenS222C(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
         "attachment": {
@@ -574,11 +588,6 @@ function canteenS221A(recipientId, text) {
                     "title": "At the end of the corridor take the stairs.",
                     "subtitle": "Go up 2 flights.",
                     "image_url": imageUrl
-                                        },
-                    
-                                        {
-                    "title": "Turn right and right again.",
-                    "image_url": imageUrl
                                         }
 
                 ]
@@ -587,7 +596,6 @@ function canteenS221A(recipientId, text) {
     };
     sendMessage(recipientId, message);
 };
-
 
 function canteenS221B(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
@@ -598,23 +606,17 @@ function canteenS221B(recipientId, text) {
                 "template_type": "list", 
                 "top_element_style": "compact",
                 "elements": [
-                    {
+                                        {
+                    "title": "Turn right and right again.",
+                    "image_url": imageUrl
+                                        },
+                                        {
                     "title": "At the end of this corridor turn right.",
                     "image_url": imageUrl
                      },
                     
                                         {
                     "title": "Turn left and go up 1 flight of stairs.", 
-                    "image_url": imageUrl
-                                        },
-                    
-                                        {
-                    "title": "Go down the stairs until you reach the second floor.",
-                    "image_url": imageUrl
-                                        },
-                    
-                                        {
-                    "title": "Walk along the corridor and take the third right.",
                     "image_url": imageUrl
                                         }
 
@@ -625,7 +627,6 @@ function canteenS221B(recipientId, text) {
     sendMessage(recipientId, message);
 };
 
-
 function canteenS221C(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
@@ -635,7 +636,16 @@ function canteenS221C(recipientId, text) {
                 "template_type": "list", 
                 "top_element_style": "compact",
                 "elements": [
-                    {
+                                        {
+                    "title": "Go down the stairs until you reach the second floor.",
+                    "image_url": imageUrl
+                                        },
+                    
+                                        {
+                    "title": "Walk along the corridor and take the third right.",
+                    "image_url": imageUrl
+                                        },
+                                        {
                     "title": "Turn left.",
                     "image_url": imageUrl
                      },
@@ -650,6 +660,7 @@ function canteenS221C(recipientId, text) {
     };
     sendMessage(recipientId, message);
 };
+
 
 function libraryCanteen(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
