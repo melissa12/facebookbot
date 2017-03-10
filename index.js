@@ -60,8 +60,8 @@ app.post('/webhook', function (req, res) {
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.21") {
             canteenS221A(event.sender.id, {text: "Here"}); 
-            canteenS221B(event.sender.id, {text: "Here"}); 
-            canteenS221C(event.sender.id, {text: "Here"}); 
+            setTimeout(canteenS221B(event.sender.id, {text: "Here"}), 3000); 
+            setTimeout(canteenS221C(event.sender.id, {text: "Here"}), 3000); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to the canteen") {
             libraryCanteen(event.sender.id, {text: "Here"}); 
@@ -74,14 +74,18 @@ app.post('/webhook', function (req, res) {
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to S1.32") {
             libraryS132A(event.sender.id, {text: "Here"}); 
-            libraryS132B(event.sender.id, {text: "Here"});
+            setTimeout(libraryS132B(event.sender.id, {text: "Here"}), 3000);
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to N4.07") {
             libraryN407(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to S2.22") {
             libraryS222A(event.sender.id, {text: "Here"}); 
-            libraryS222B(event.sender.id, {text: "Here"}); 
+            setTimeout(libraryS222B(event.sender.id, {text: "Here"}), 3000); 
+        }
+        else if (event.message && event.message.text === "I am at the library and I want to go to C2.04") {
+            libraryC204A(event.sender.id, {text: "Here"}); 
+            setTimeout(libraryC204B(event.sender.id, {text: "Here"}), 3000); 
         }
         
     }
@@ -830,6 +834,64 @@ function libraryN407(recipientId, text) {
                                                             {
                     "title": "Turn left at the top of the stairs.",
                     "subtitle": "The door is at the top of the stairs.", 
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+function libraryC204A(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Exit the library, take the stairs to your left.",
+                    "subtitle": "Go up 1 flight.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn right and walk along the corridor.",
+                    "image_url": imageUrl
+                     },
+                                                            {
+                    "title": "At the end of the corridor take the stairs.",
+                    "subtitle": "Go up 2 flights.", 
+                    "image_url": imageUrl
+                     },
+                                                            {
+                    "title": "Turn right and right again.",
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+function libraryC204B(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Walk along this corridor.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "It's the fourth door on your left.",
                     "image_url": imageUrl
                      }
                 ]
