@@ -80,11 +80,12 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at the library and I want to go to N4.07") {
             libraryN407(event.sender.id, {text: "Here"}); 
         }
+        /*
         else if (event.message && event.message.text === "I am at the library and I want to go to S2.22") { 
             libraryS222A(event.sender.id, {text: "Here"}); 
             libraryS222B(event.sender.id, {text: "Here"}); 
         }
-
+        */
         
     }
     res.sendStatus(200);
