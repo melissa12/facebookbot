@@ -42,7 +42,6 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.04") {
             canteenC204A(event.sender.id, {text: "Here"});
             canteenC204B(event.sender.id, {text: "Here"});
-            canteenC204C(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.07") {
             canteenC207A(event.sender.id, {text: "Here"}); 
@@ -272,25 +271,9 @@ function canteenC204B(recipientId, text) {
                                         {
                     "title": "Turn right and right again.",
                     "image_url": imageUrl
-                    }
-                ]
-            }
-        }
-    };
-    sendMessage(recipientId, message);
-};
-
-
-function canteenC204C(recipientId, text) { 
-    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
-    message = { 
-        "attachment": {
-            "type": "template",
-            "payload": { 
-                "template_type": "list", 
-                "top_element_style": "compact",
-                "elements": [
-                    {
+                    },
+                    
+                                        {
                     "title": "Walk along this corridor.",
                     "image_url": imageUrl
                      },
