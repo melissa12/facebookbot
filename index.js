@@ -61,34 +61,13 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.21") {
             var addition = 0; 
             canteenS221A(event.sender.id, {text: "Here"}); 
-            var addition = 1;
-            var addition = 2; 
-            var addition = 3;
-            var addition = 4; 
-            var addition = 5; 
-            var addition = 6;
-            var addition = 7; 
-            var addition = 8;
-            var addition = 9;
-            var addition = 10; 
-            var addiiton = 11; 
-            var addition = 12;
-            var addition = 13; 
-            var addition = 14; 
-            var addition = 15; 
+            for (i = 0; i < 15; i++) {
+                var addition++;
+            }
             canteenS221B(event.sender.id, {text: "Here"});
-            var addition = 4; 
-            var addition = 5; 
-            var addition = 6;
-            var addition = 7; 
-            var addition = 8;
-            var addition = 9; 
-            var addition = 10; 
-            var addiiton = 11; 
-            var addition = 12;
-            var addition = 13; 
-            var addition = 14; 
-            var addition = 15; 
+            for (i = 0; i < 15; i++) {
+                var addition++;
+            }
             canteenS221C(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to the canteen") {
