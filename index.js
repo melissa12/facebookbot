@@ -40,168 +40,28 @@ app.post('/webhook', function (req, res) {
             canteenT209(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.04") {
-            var addition = 0;
             canteenC204A(event.sender.id, {text: "Here"});
-            var addition = 1;
-            var addition = 2;
-            var addition = 3;
-            var addition = 4;
-            var addition = 5;
-            var addition = 6;
-            var addition = 7;
-            var addition = 8;
-            var addition = 9;
-            var addition = 10;
-            var addition = 12;
-            var addition = 13;
-            var addition = 14;
-            var addition = 15;
-            var addition = 16;
-            var addition = 17;
-            var addition = 18;
-            var addition = 19;
-            var addition = 20;
-            var addition = 21;
-            var addition = 22;
-            var addition = 23;
-            var addition = 24;
-            var addition = 25;
-            var addition = 26;
-            var addition = 27;
-            var addition = 28;
-            var addition = 29;
             canteenC204B(event.sender.id, {text: "Here"});
+            canteenC204C(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.07") {
-            var addition = 0; 
             canteenC207A(event.sender.id, {text: "Here"}); 
-            var addition = 1;
-            var addition = 2;
-            var addition = 3;
-            var addition = 4;
-            var addition = 5;
-            var addition = 6;
-            var addition = 7;
-            var addition = 8;
-            var addition = 9;
-            var addition = 10;
-            var addition = 12;
-            var addition = 13;
-            var addition = 14;
-            var addition = 15;
-            var addition = 16;
-            var addition = 17;
-            var addition = 18;
-            var addition = 19;
-            var addition = 20;
-            var addition = 21;
-            var addition = 22;
-            var addition = 23;
-            var addition = 24;
-            var addition = 25;
-            var addition = 26;
-            var addition = 27;
-            var addition = 28;
-            var addition = 29;
             canteenC207B(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S1.32") {
-            var addition = 0;
             canteenS132A(event.sender.id, {text: "Here"}); 
-            var addition = 1;
-            var addition = 2;
-            var addition = 3;
-            var addition = 4;
-            var addition = 5;
-            var addition = 6;
-            var addition = 7;
-            var addition = 8;
-            var addition = 9;
-            var addition = 10;
-            var addition = 12;
-            var addition = 13;
-            var addition = 14;
-            var addition = 15;
-            var addition = 16;
-            var addition = 17;
-            var addition = 18;
-            var addition = 19;
-            var addition = 20;
             canteenS132B(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.22") {
-            var addition = 0; 
             canteenS222A(event.sender.id, {text: "Here"}); 
-            var addition = 1;
-            var addition = 2;
-            var addition = 3;
-            var addition = 4;
-            var addition = 5;
-            var addition = 6;
-            var addition = 7;
-            var addition = 8;
-            var addition = 9;
-            var addition = 10;
-            var addition = 12;
-            var addition = 13;
-            var addition = 14;
-            var addition = 15;
-            var addition = 16;
-            var addition = 17;
-            var addition = 18;
-            var addition = 19;
-            var addition = 20;
-            var addition = 21;
-            var addition = 22;
-            var addition = 23;
-            var addition = 24;
-            var addition = 25;
-            var addition = 26;
-            var addition = 27;
-            var addition = 28;
-            var addition = 29;
             canteenS222B(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to N4.07") {
             canteenN407(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.21") {
-            var addition = 0; 
             canteenS221A(event.sender.id, {text: "Here"}); 
-            var addition = 1;
-            var addition = 2;
-            var addition = 3;
-            var addition = 4;
-            var addition = 5;
-            var addition = 6;
-            var addition = 7;
-            var addition = 8;
-            var addition = 9;
-            var addition = 10;
-            var addition = 12;
-            var addition = 13;
-            var addition = 14;
-            var addition = 15;
             canteenS221B(event.sender.id, {text: "Here"});
-            var addition = 1;
-            var addition = 2;
-            var addition = 3;
-            var addition = 4;
-            var addition = 5;
-            var addition = 6;
-            var addition = 7;
-            var addition = 8;
-            var addition = 9;
-            var addition = 10;
-            var addition = 12;
-            var addition = 13;
-            var addition = 14;
-            var addition = 15;
-            var addition = 16;
-            var addition = 17;
-            var addition = 18;
-            var addition = 19;
-            var addition = 20;
             canteenS221C(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to the canteen") {
@@ -214,54 +74,14 @@ app.post('/webhook', function (req, res) {
             libraryT207(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to S1.32") {
-            var addition = 0;
             libraryS132A(event.sender.id, {text: "Here"}); 
-            var addition = 1;
-            var addition = 2;
-            var addition = 3;
-            var addition = 4;
-            var addition = 5;
-            var addition = 6;
-            var addition = 7;
-            var addition = 8;
-            var addition = 9;
-            var addition = 10;
-            var addition = 12;
-            var addition = 13;
-            var addition = 14;
-            var addition = 15;
-            var addition = 16;
-            var addition = 17;
-            var addition = 18;
-            var addition = 19;
-            var addition = 20;
             libraryS132B(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to N4.07") {
             libraryN407(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to S2.22") { 
-            var addition = 0; 
             libraryS222A(event.sender.id, {text: "Here"}); 
-            var addition = 1;
-            var addition = 2;
-            var addition = 3;
-            var addition = 4;
-            var addition = 5;
-            var addition = 6;
-            var addition = 7;
-            var addition = 8;
-            var addition = 9;
-            var addition = 10;
-            var addition = 12;
-            var addition = 13;
-            var addition = 14;
-            var addition = 15;
-            var addition = 16;
-            var addition = 17;
-            var addition = 18;
-            var addition = 19;
-            var addition = 20;
             libraryS222B(event.sender.id, {text: "Here"}); 
         }
 
@@ -425,8 +245,23 @@ function canteenC204A(recipientId, text) {
                                         {
                     "title": "Turn right and walk along the corridor.",         
                     "image_url": imageUrl
-                                        },     
-                    
+                                        }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+function canteenC204B(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
                                         {
                     "title": "At the end of the corridor take the stairs.",  
                     "subtitle": "Go up 2 flights.",                       
@@ -445,8 +280,7 @@ function canteenC204A(recipientId, text) {
 };
 
 
-
-function canteenC204B(recipientId, text) { 
+function canteenC204C(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
         "attachment": {
