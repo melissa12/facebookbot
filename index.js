@@ -61,6 +61,15 @@ app.post('/webhook', function (req, res) {
             var addition = 18;
             var addition = 19;
             var addition = 20;
+            var addition = 21;
+            var addition = 22;
+            var addition = 23;
+            var addition = 24;
+            var addition = 25;
+            var addition = 26;
+            var addition = 27;
+            var addition = 28;
+            var addition = 29;
             canteenC204B(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.07") {
@@ -85,6 +94,15 @@ app.post('/webhook', function (req, res) {
             var addition = 18;
             var addition = 19;
             var addition = 20;
+            var addition = 21;
+            var addition = 22;
+            var addition = 23;
+            var addition = 24;
+            var addition = 25;
+            var addition = 26;
+            var addition = 27;
+            var addition = 28;
+            var addition = 29;
             canteenC207B(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S1.32") {
@@ -133,6 +151,15 @@ app.post('/webhook', function (req, res) {
             var addition = 18;
             var addition = 19;
             var addition = 20;
+            var addition = 21;
+            var addition = 22;
+            var addition = 23;
+            var addition = 24;
+            var addition = 25;
+            var addition = 26;
+            var addition = 27;
+            var addition = 28;
+            var addition = 29;
             canteenS222B(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to N4.07") {
