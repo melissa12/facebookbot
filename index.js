@@ -40,19 +40,99 @@ app.post('/webhook', function (req, res) {
             canteenT209(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.04") {
-            canteenC204A(event.sender.id, {text: "Here"}); 
+            var addition = 0;
+            canteenC204A(event.sender.id, {text: "Here"});
+            var addition = 1;
+            var addition = 2;
+            var addition = 3;
+            var addition = 4;
+            var addition = 5;
+            var addition = 6;
+            var addition = 7;
+            var addition = 8;
+            var addition = 9;
+            var addition = 10;
+            var addition = 12;
+            var addition = 13;
+            var addition = 14;
+            var addition = 15;
+            var addition = 16;
+            var addition = 17;
+            var addition = 18;
+            var addition = 19;
+            var addition = 20;
             canteenC204B(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to C2.07") {
+            var addition = 0; 
             canteenC207A(event.sender.id, {text: "Here"}); 
+            var addition = 1;
+            var addition = 2;
+            var addition = 3;
+            var addition = 4;
+            var addition = 5;
+            var addition = 6;
+            var addition = 7;
+            var addition = 8;
+            var addition = 9;
+            var addition = 10;
+            var addition = 12;
+            var addition = 13;
+            var addition = 14;
+            var addition = 15;
+            var addition = 16;
+            var addition = 17;
+            var addition = 18;
+            var addition = 19;
+            var addition = 20;
             canteenC207B(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S1.32") {
+            var addition = 0;
             canteenS132A(event.sender.id, {text: "Here"}); 
+            var addition = 1;
+            var addition = 2;
+            var addition = 3;
+            var addition = 4;
+            var addition = 5;
+            var addition = 6;
+            var addition = 7;
+            var addition = 8;
+            var addition = 9;
+            var addition = 10;
+            var addition = 12;
+            var addition = 13;
+            var addition = 14;
+            var addition = 15;
+            var addition = 16;
+            var addition = 17;
+            var addition = 18;
+            var addition = 19;
+            var addition = 20;
             canteenS132B(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.22") {
+            var addition = 0; 
             canteenS222A(event.sender.id, {text: "Here"}); 
+            var addition = 1;
+            var addition = 2;
+            var addition = 3;
+            var addition = 4;
+            var addition = 5;
+            var addition = 6;
+            var addition = 7;
+            var addition = 8;
+            var addition = 9;
+            var addition = 10;
+            var addition = 12;
+            var addition = 13;
+            var addition = 14;
+            var addition = 15;
+            var addition = 16;
+            var addition = 17;
+            var addition = 18;
+            var addition = 19;
+            var addition = 20;
             canteenS222B(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to N4.07") {
@@ -107,14 +187,54 @@ app.post('/webhook', function (req, res) {
             libraryT207(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to S1.32") {
+            var addition = 0;
             libraryS132A(event.sender.id, {text: "Here"}); 
+            var addition = 1;
+            var addition = 2;
+            var addition = 3;
+            var addition = 4;
+            var addition = 5;
+            var addition = 6;
+            var addition = 7;
+            var addition = 8;
+            var addition = 9;
+            var addition = 10;
+            var addition = 12;
+            var addition = 13;
+            var addition = 14;
+            var addition = 15;
+            var addition = 16;
+            var addition = 17;
+            var addition = 18;
+            var addition = 19;
+            var addition = 20;
             libraryS132B(event.sender.id, {text: "Here"});
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to N4.07") {
             libraryN407(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to S2.22") { 
+            var addition = 0; 
             libraryS222A(event.sender.id, {text: "Here"}); 
+            var addition = 1;
+            var addition = 2;
+            var addition = 3;
+            var addition = 4;
+            var addition = 5;
+            var addition = 6;
+            var addition = 7;
+            var addition = 8;
+            var addition = 9;
+            var addition = 10;
+            var addition = 12;
+            var addition = 13;
+            var addition = 14;
+            var addition = 15;
+            var addition = 16;
+            var addition = 17;
+            var addition = 18;
+            var addition = 19;
+            var addition = 20;
             libraryS222B(event.sender.id, {text: "Here"}); 
         }
 
