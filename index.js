@@ -581,11 +581,13 @@ function canteenS221A(recipientId, text) {
                     
                                         {
                     "title": "Turn right and walk along the corridor.", 
+                    "image_url": imageUrl
                                         },
                     
                                         {
                     "title": "At the end of the corridor take the stairs.",
                     "subtitle": "Go up 2 flights.",
+                    "image_url": imageUrl            
                                         }
 
                 ]
@@ -606,13 +608,16 @@ function canteenS221B(recipientId, text) {
                 "elements": [
                                         {
                     "title": "Turn right and right again.",
+                    "image_url": imageUrl
                                         },
                                         {
                     "title": "At the end of this corridor turn right.",
+                    "image_url": imageUrl
                      },
                     
                                         {
                     "title": "Turn left and go up 1 flight of stairs.", 
+                    "image_url": imageUrl
                                         }
 
                 ]
@@ -633,13 +638,16 @@ function canteenS221C(recipientId, text) {
                 "elements": [
                                         {
                     "title": "Go down the stairs until you reach the second floor.",
+                    "image_url": imageUrl
                                         },
                     
                                         {
                     "title": "Walk along the corridor and take the third right.",
+                    "image_url": imageUrl
                                         },
                                         {
                     "title": "Turn left.",
+                    "image_url": imageUrl
                      },
                     
                     {
