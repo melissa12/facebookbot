@@ -60,9 +60,13 @@ app.post('/webhook', function (req, res) {
             canteenN407(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.21") {
-            canteenS221A(event.sender.id, {text: "Here"}); 
+            /*canteenS221A(event.sender.id, {text: "Here"}); 
             canteenS221B(event.sender.id, {text: "Here"});
-            canteenS221C(event.sender.id, {text: "Here"}); 
+            canteenS221C(event.sender.id, {text: "Here"});*/
+            sendMessage(event.sender.id, {text: "Take the stairs in front of you. Go up 3 flights. Turn right and walk along the corridor. At the end of the corridor take the stairs and go up 2 flights."});
+            sendMessage(event.sender.id, {text: "Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs."});
+            sendMessage(event.sender.id, {text: "Go down the stairs until you reach the second floor. Walk along the corridor and take the 3rd right."});
+            sendMessage(event.sender.id, {text: "Turn left. The door is the first door on your left."});
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to the canteen") {
             libraryCanteen(event.sender.id, {text: "Here"}); 
