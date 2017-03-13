@@ -117,6 +117,16 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to C2.04") { 
             S221C204(event.sender.id, {text: "Here"}); 
         }
+        else if (event.message && event.message.text === "I am at S2.22 and I want to go to the toilet") { 
+            S222Toilet(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at S2.22 and I want to go to the canteen.") {
+            sendMessage(event.sender.id, {text: "As you leave the room turn left. Walk along this corridor. Take the stairs and go up to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along this corrdior. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 3 flights of stairs. The canteen is on your right.")
+        } 
+        else if (event.message && event.message.text === "I am at S2.22 and I want to go to the library.") { 
+                sendMessage(event.sender.id, {text: "As you leave the room turn left. Walk along this corridor. Take the stairs and go up to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along this corrdior. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 1 flight of stairs. The library is just in front of you."}); 
+        }
+
             
     }
     res.sendStatus(200);
@@ -747,6 +757,33 @@ function S221C204(recipientId, text) {
                     "subtitle": "C2.04 is the fifth door on your right.", 
                     "image_url": imageUrl 
                      }, 
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+
+function S222Toilet(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave the room, turn right.",
+                    "subtitle": "Walk along this corridor.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "The toilet is the third door on your right.",
+                    "image_url": imageUrl
+                     }
                 ]
             }
         }
