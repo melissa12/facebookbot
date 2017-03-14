@@ -145,6 +145,9 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at S2.22 and I want to go to N4.07") { 
             sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs and go up to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go up 4 flights. Turn left at the top of the stairs. The door is at the top of thestairs. "}); 
         }
+        else if (event.message && event.message.text === "I am at S2.22 and I want to go to C2.04") { 
+            S222C204(event.sender.id, {text: "Here"}); 
+        } 
             
     }
     res.sendStatus(200);
@@ -894,6 +897,41 @@ function S222S132(recipientId, text) {
                     "subtitle": "S1.32 is just on your right.", 
                     "image_url": imageUrl
                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function S222C204(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn left and walk along the corridor.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Take stairs up to floor 2.5.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn right, go down 1 flight of stairs.",
+                    "subtitle": "Turn right, then left.", 
+                    "image_url": imageUrl
+                    },
+                                                            {
+                    "title": "Walk along the corridor.",
+                    "subtitle": "C2.04 is the fifth door on your right.", 
+                    "image_url": imageUrl
+                    } 
                 ]
             }
         }
