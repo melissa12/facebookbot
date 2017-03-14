@@ -124,6 +124,12 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at S2.22 and I want to go to the canteen") { 
             sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs and go up to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 3 flights of stairs. The canteen is to your right."}); 
         }
+        else if (event.message && event.message.text === "I am at S2.22 and I want to go to the library") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs and go up to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 1 flight of stairs. The library is just in front of you."}); 
+        } 
+        else if (event.message && event.message.text === "I am at S2.22 and I want to go to S2.21") { 
+            S222S221(event.sender.id, {text: "Here"}); 
+        } 
 
             
     }
@@ -788,3 +794,30 @@ function S222Toilet(recipientId, text) {
     sendMessage(recipientId, message);
 };
 
+
+
+function S222S221(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn left as you leave the room.",
+                    "subtitle": "Walk along this corridor.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn left.",
+                    "subtitle": "S2.21 is the first door on your left.", 
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
