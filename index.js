@@ -219,6 +219,21 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at N4.07 and I want to go to T2.09") { 
             N407T209(event.sender.id, {text: "Here"}); 
         }
+        else if (event.message && event.message.text === "I am at N4.07 and I want to go to C2.04") { 
+            N407C204(event.sender.id, {text: "Here"}); 
+        } 
+        else if (event.message && event.message.text === "I am at N4.07 and I want to go to C2.07") { 
+            N407C207(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at N4.07 and I want to go to S2.22") { 
+            sendMessage(event.sender.id, {text: "Go down 1 flight of stairs and turn right. Go down 4 flights of stairs. Turn right and right again. Walk along this corridor. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and take the stairs down to the second floor. Walk along this corridor. S2.22 is the second door on your right."}); 
+        } 
+        else if (event.message && event.message.text === "I am at N4.07 and I want to go to S2.21") { 
+            sendMessage(event.sender.id, {text: "Go down 1 flight of stairs and turn right. Go down 4 flights of stairs. Turn right and right again. Walk along this corridor. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and take the stairs down to the second floor. Walk along the corridor and take the third right. Turn left. S2.21 is the first door on your left."}); 
+        }
+        else if (event.message && event.message.text === "I am at N4.07 and I want to go to S1.32") { 
+            sendMessage(event.sender.id, {text: "Go down 1 flight of stairs and turn right. Go down 4 flights of stairs. Turn right and right again. Walk along this corridor. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and take the stairs down to the first floor. Walk along the corridor and take the second right. S1.32 is just on your right."}); 
+        }
             
     }
     res.sendStatus(200);
@@ -1776,6 +1791,70 @@ function N407T209(recipientId, text) {
                                         { 
                     "title": "Go up 1 flight of stairs.", 
                     "subtitle": "T2.09 is just to your right.",
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function N407C204(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Go down 1 flight of stairs.",
+                    "subtitle": "Turn right and take the stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Go down 4 flights of stairs.", 
+                    "subtitle": "Turn right and right again.", 
+                    "image_url": imageUrl
+                     },
+                                        { 
+                    "title": "Walk along this corridor.", 
+                    "subtitle": "C2.04 is the fourth door on your left.",
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function N407C207(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Go down 1 flight of stairs.",
+                    "subtitle": "Turn right and take the stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Go down 4 flights of stairs.", 
+                    "subtitle": "Turn right and right again.", 
+                    "image_url": imageUrl
+                     },
+                                        { 
+                    "title": "Walk along this corridor.", 
+                    "subtitle": "C2.07 is the seventh door on your left.",
                     "image_url": imageUrl
                     }
                 ]
