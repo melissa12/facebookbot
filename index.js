@@ -705,7 +705,7 @@ function S221C207(recipientId, text) {
                     "image_url": imageUrl
                      },
                                         {
-                    "title": " Walk along the corridor.", 
+                    "title": "Walk along the corridor.", 
                     "subtitle": "C2.07 is the second door on your right.", 
                     "image_url": imageUrl 
                      }, 
