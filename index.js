@@ -1428,7 +1428,7 @@ function C207T207(recipientId, text) {
 };
 
 
-function C204T209(recipientId, text) { 
+function C207T209(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
         "attachment": {
@@ -1462,30 +1462,3 @@ function C204T209(recipientId, text) {
     };
     sendMessage(recipientId, message);
 };
-
-/*
-function C207C204(recipientId, text) { 
-    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
-    message = { 
-        "attachment": {
-            "type": "template",
-            "payload": { 
-                "template_type": "list", 
-                "top_element_style": "compact",
-                "elements": [
-                    {
-                    "title": "Turn right as you leave the room.",
-                    "subtitle": "Walk along the corridor.", 
-                    "image_url": imageUrl
-                     },
-                                        {
-                    "title": "C2.04 is the third door on your right.", 
-                    "image_url": imageUrl
-                     }
-                ]
-            }
-        }
-    };
-    sendMessage(recipientId, message);
-};
-*/
