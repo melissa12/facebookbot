@@ -207,6 +207,18 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at C2.07 and I want to go to N4.07") { 
             C207N407(event.sender.id, {text: "Here"}); 
         }
+        else if (event.message && event.message.text === "I am at N4.07 and I want to go to the canteen") { 
+            N407Canteen(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at N4.07 and I want to go to the library") { 
+            N407Library(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at N4.07 and I want to go to T2.07") { 
+            N407T207(event.sender.id, {text: "Here"}); 
+        } 
+        else if (event.message && event.message.text === "I am at N4.07 and I want to go to T2.09") { 
+            N407T209(event.sender.id, {text: "Here"}); 
+        }
             
     }
     res.sendStatus(200);
@@ -1632,6 +1644,138 @@ function C207N407(recipientId, text) {
                                         { 
                     "title": "Turn left at the top of the stairs.", 
                     "subtitle": "N4.07 is at the top of the stairs.",
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function N407Canteen(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Go down 1 flight of stairs.",
+                    "subtitle": "Turn right and take the stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Go down 6 flights of stairs.", 
+                    "subtitle": "At the end of the corridor take the stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        { 
+                    "title": "Go down 3 flights of stairs.", 
+                    "subtitle": "The canteen is just to your right.",
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function N407Library(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Go down 1 flight of stairs.",
+                    "subtitle": "Turn right and take the stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Go down 6 flights of stairs.", 
+                    "subtitle": "At the end of the corridor take the stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        { 
+                    "title": "Go down 1 flight of stairs.", 
+                    "subtitle": "The library is just in front of you.",
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function N407T207(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Go down 1 flight of stairs.",
+                    "subtitle": "Turn right and take the stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Go down 6 flights of stairs.", 
+                    "subtitle": "At the end of the corridor take the stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        { 
+                    "title": "Go up 1 flight of stairs.", 
+                    "subtitle": "Go through the doors in front of you.",
+                    "image_url": imageUrl
+                    },
+                                        {
+                    "title": "T2.07 is the second door on your right.",
+                    "image_url": imageUrl
+                    },
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function N407T209(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Go down 1 flight of stairs.",
+                    "subtitle": "Turn right and take the stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Go down 6 flights of stairs.", 
+                    "subtitle": "At the end of the corridor take the stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        { 
+                    "title": "Go up 1 flight of stairs.", 
+                    "subtitle": "T2.09 is just to your right.",
                     "image_url": imageUrl
                     }
                 ]
