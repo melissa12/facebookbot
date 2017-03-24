@@ -1390,7 +1390,7 @@ function C207Library(recipientId, text) {
     sendMessage(recipientId, message);
 };
 
-
+/*
 function C207T207(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
@@ -1488,3 +1488,4 @@ function C207C204(recipientId, text) {
     };
     sendMessage(recipientId, message);
 };
+*/
