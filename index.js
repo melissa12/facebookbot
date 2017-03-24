@@ -632,7 +632,7 @@ function S221Toilet(recipientId, text) {
                 "elements": [
                     {
                     "title": "Turn left and walk along the corridor.",
-                    "subtitle": "Go through the doors and continue to walk along the corridor.",
+                    "subtitle": "Go through the doors and walk along the corridor.",
                     "image_url": imageUrl
                      },
                                         {
