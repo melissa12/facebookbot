@@ -234,6 +234,18 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at N4.07 and I want to go to S1.32") { 
             sendMessage(event.sender.id, {text: "Go down 1 flight of stairs and turn right. Go down 4 flights of stairs. Turn right and right again. Walk along this corridor. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and take the stairs down to the first floor. Walk along the corridor and take the second right. S1.32 is just on your right."}); 
         }
+        else if (event.message && event.message.text === "I am at T2.09 and I want to go to the toilet") { 
+            T209Toilet(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at T2.09 and I want to go to the canteen") { 
+            T209Canteen(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at T2.09 and I want to go to the library") { 
+            T209Library(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at T2.09 and I want to go to T2.07") { 
+            T209T207(event.sender.id, {text: "Here"}); 
+        }
             
     }
     res.sendStatus(200);
@@ -1857,6 +1869,112 @@ function N407C207(recipientId, text) {
                     "subtitle": "C2.07 is the seventh door on your left.",
                     "image_url": imageUrl
                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function T209Toilet(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave T2.09, walk through the doors.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "The toilet is the first door on your left.", 
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+
+function T209Canteen(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave T2.09, turn left.",
+                    "subtitle": "Take the stairs.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Go down 4 flights of stairs.", 
+                    "subtitle": "The canteen is just to your right.",
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function T209Library(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave T2.09, turn left.",
+                    "subtitle": "Take the stairs.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Go down 2 flights of stairs.", 
+                    "subtitle": "The library is just in front of you.",
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function T209T207(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave T2.09, walk through the doors.",
+                    "subtitle": "Walk along the corridor.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "T2.07 is the second door on your right.", 
+                    "image_url": imageUrl
+                     }
                 ]
             }
         }
