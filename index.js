@@ -462,7 +462,7 @@ function libraryT209(recipientId, text) {
                 "elements": [
                     {
                     "title": "Exit the library, take the stairs to your left.",
-                    "subtitle": "Go up 2 flight.",
+                    "subtitle": "Go up 2 flights.",
                     "image_url": imageUrl
                      },
                                         {
