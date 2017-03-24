@@ -159,6 +159,18 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at C2.04 and I want to go to T2.07") { 
             C204T207(event.sender.id, {text: "Here"}); 
         } 
+        else if (event.message && event.message.text === "I am at C2.04 and I want to go to T2.09") { 
+            C204T209(event.sender.id, {text: "Here"}); 
+        } 
+        else if (event.message && event.message.text === "I am at C2.04 and I want to go to C2.07") { 
+            C204C207(event.sender.id, {text: "Here"}); 
+        } 
+        else if (event.message && event.message.text === "I am at C2.04 and I want to go to S2.22") { 
+            C204S222(event.sender.id, {text: "Here"}); 
+        } 
+        else if (event.message && event.message.text === "I am at C2.04 and I want to go to S2.21") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave the room. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the second floor. Walk along the corridor and take the third right. Turn left. S2.21 is the first door on your left."}); 
+        }
             
     }
     res.sendStatus(200);
@@ -1079,6 +1091,105 @@ function C204T207(recipientId, text) {
                                         {
                     "title": "Go through the doors in front of you.", 
                     "subtitle": "T2.07 is the second door on your right.",
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function C204T209(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn right as you leave the room.",
+                    "subtitle": "Walk to the end of the corridor and turn left.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Take the stairs on your left.", 
+                    "subtitle": "Go down 2 flights and walk along the corridor.",
+                    "image_url": imageUrl
+                     },
+                                        { 
+                    "title": "At the end of the corridor take the stairs.", 
+                    "subtitle": "Go up 1 flight of stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "T2.09 is just to your right.", 
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function C204C207(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn left as you leave the room.",
+                    "subtitle": "Walk along the corridor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "It's the third door on your left.", 
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+
+function C204S222(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn left as you leave the room.",
+                    "subtitle": "Walk to the end of the corridor and turn right.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn left and go up 1 flight of stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn left and take the stairs.", 
+                    "subtitle": "Go down the stairs until you reach the second floor.", 
+                    "image_url": imageUrl
+                    },
+                                        {
+                    "title": "Walk along the corridor.", 
+                    "subtitle": "It's the second door on your right.", 
                     "image_url": imageUrl
                     }
                 ]
