@@ -763,7 +763,7 @@ function S221C204(recipientId, text) {
                 "top_element_style": "compact",
                 "elements": [
                     {
-                    "title": "Turn right and right again as you leave the room.",
+                    "title": "Turn right and right again.",
                     "subtitle": "Then turn left and walk along the corridor.",
                     "image_url": imageUrl
                      },
@@ -773,10 +773,11 @@ function S221C204(recipientId, text) {
                      },
                                         {
                     "title": "Turn right and go down 1 flight of stairs.",
+                    "subtitle": "Turn right, then left.", 
                     "image_url": imageUrl
                      },
                                         {
-                    "title": "Turn right, then left, and walk along the corridor.", 
+                    "title": "Walk along the corridor.", 
                     "subtitle": "C2.04 is the fifth door on your right.", 
                     "image_url": imageUrl 
                      }, 
