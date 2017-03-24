@@ -249,7 +249,16 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.04") { 
             T209C204(event.sender.id, {text: "Here"}); 
         } 
-            
+        else if (event.message && event.message.text === "I am at T2.09 and I want to go to S2.22") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave T2.09 and take the stairs. Go down 1 flight of stairs. Walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the second floor. Walk along this corridor. S2.22 is the second door on your right."}); 
+        }
+        else if (event.message && event.message.text === "I am at T2.09 and I want to go to S2.21") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave T2.09 and take the stairs. Go down 1 flight of stairs. Walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the second floor. Walk along the corridor and take the third right. Turn left. S2.21 is the first door on your left."}); 
+        }
+        else if (event.message && event.message.text === "I am at T2.09 and I want to go to S1.32") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave T2.09 and take the stairs. Go down 1 flight of stairs. Walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the first floor. Walk along this corridor and take the second right. S1.32 is just on your right."}); 
+        }
+        
     }
     res.sendStatus(200);
 });
