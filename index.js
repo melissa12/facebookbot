@@ -117,7 +117,6 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to C2.04") { 
             S221C204(event.sender.id, {text: "Here"}); 
         }
-        
         else if (event.message && event.message.text === "I am at S2.22 and I want to go to the toilet") { 
             S222Toilet(event.sender.id, {text: "Here"}); 
         }
@@ -148,6 +147,12 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at S2.22 and I want to go to C2.04") { 
             S222C204(event.sender.id, {text: "Here"}); 
         } 
+        else if (event.message && event.message.text === "I am at C2.04 and I want to go to the toilet") { 
+            C204Toilet(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at C2.04 and I want to go to the canteen") { 
+            C204Canteen(event.sender.id, {text: "Here"}); 
+        }
             
     }
     res.sendStatus(200);
@@ -935,6 +940,68 @@ function S222C204(recipientId, text) {
                     "subtitle": "C2.04 is the fifth door on your right.", 
                     "image_url": imageUrl
                     } 
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function C204Toilet(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn right as you leave the room.",
+                    "subtitle": "Walk to the end of the corridor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "The toilets are right in front of you.", 
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function C204Canteen(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn right as you leave the room.",
+                    "subtitle": "Walk to the end of the corridor and turn left.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Take the stairs on your left.", 
+                    "subtitle": "Go down 2 flights and walk along the corridor.",
+                    "image_url": imageUrl
+                     },
+                                        { 
+                    "title": "At the end of the corridor take the stairs.", 
+                    "subtitle": "Go down 3 flight of stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "The canteen is to your right.", 
+                    "image_url": imageUrl
+                    }
                 ]
             }
         }
