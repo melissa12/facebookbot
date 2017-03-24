@@ -186,6 +186,7 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at C2.07 and I want to go to the library") { 
             C207Library(event.sender.id, {text: "Here"}); 
         } 
+        /*
         else if (event.message && event.message.text === "I am at C2.07 and I want to go to T2.07") { 
             C207T207(event.sender.id, {text: "Here"}); 
         }
@@ -195,7 +196,7 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at C2.07 and I want to go to C2.04") { 
             C207C204(event.sender.id, {text: "Here"}); 
         }
-            
+         */   
     }
     res.sendStatus(200);
 });
