@@ -25,7 +25,7 @@ app.post('/webhook', function (req, res) {
     for (i = 0; i < events.length; i++) {
         var event = events[i];
         if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.07"){
-            sendMessage(event.sender.id, {text: "Directions"});
+            T209C207(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to the toilet") {
             canteenToilet(event.sender.id, {text: "Here"}); 
@@ -246,6 +246,9 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at T2.09 and I want to go to T2.07") { 
             T209T207(event.sender.id, {text: "Here"}); 
         }
+        else if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.04") { 
+            T209C204(event.sender.id, {text: "Here"}); 
+        } 
             
     }
     res.sendStatus(200);
@@ -1975,6 +1978,80 @@ function T209T207(recipientId, text) {
                     "title": "T2.07 is the second door on your right.", 
                     "image_url": imageUrl
                      }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function T209C204(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave T2.09, turn left.",
+                    "subtitle": "Take the stairs.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Go down 1 flight of stairs.",
+                    "subtitle": "Walk along this corridor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "At the end of the corridor take the stairs.", 
+                    "subtitle": "Go up 2 flights of stairs.", 
+                    "image_url": imageUrl
+                    },
+                                        {
+                    "title": "Turn right and right again.", 
+                    "subtitle": "Walk down the corridor. It's the fourth door on your left.", 
+                    "image_url": imageUrl
+                    },
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function T209C207(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave T2.09, turn left.",
+                    "subtitle": "Take the stairs.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Go down 1 flight of stairs.",
+                    "subtitle": "Walk along this corridor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "At the end of the corridor take the stairs.", 
+                    "subtitle": "Go up 2 flights of stairs.", 
+                    "image_url": imageUrl
+                    },
+                                        {
+                    "title": "Turn right and right again.", 
+                    "subtitle": "Walk down the corridor. It's the seventh door on your left.", 
+                    "image_url": imageUrl
+                    },
                 ]
             }
         }
