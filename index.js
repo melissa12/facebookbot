@@ -186,10 +186,10 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at C2.07 and I want to go to the library") { 
             C207Library(event.sender.id, {text: "Here"}); 
         } 
-        /*
         else if (event.message && event.message.text === "I am at C2.07 and I want to go to T2.07") { 
             C207T207(event.sender.id, {text: "Here"}); 
         }
+        /*
         else if (event.message && event.message.text === "I am at C2.07 and I want to go to T2.09") { 
             C207T209(event.sender.id, {text: "Here"}); 
         } 
@@ -1390,7 +1390,7 @@ function C207Library(recipientId, text) {
     sendMessage(recipientId, message);
 };
 
-/*
+
 function C207T207(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
@@ -1427,7 +1427,7 @@ function C207T207(recipientId, text) {
     sendMessage(recipientId, message);
 };
 
-
+/*
 function C204T209(recipientId, text) { 
     var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
     message = { 
