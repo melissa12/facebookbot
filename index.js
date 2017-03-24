@@ -270,6 +270,12 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at T2.07 and I want to go to the library") { 
             T207Library(event.sender.id, {text: "Here"}); 
         }
+        else if (event.message && event.message.text === "I am at T2.07 and I want to go to T2.09") { 
+            T207T209(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at T2.07 and I want to go to C2.04") { 
+            T207C204(event.sender.id, {text: "Here"}); 
+        }
         
     }
     res.sendStatus(200);
@@ -2196,6 +2202,70 @@ function T207Library(recipientId, text) {
                      },
                                         {
                     "title": "The library is just in front of you.", 
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function T207T209(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave T2.07, turn left.",
+                    "subtitle": "Walk along the corridor, through the doors.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "T2.09 is just in front of you.", 
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+
+function T207C204(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave T2.07, turn left.",
+                    "subtitle": "Walk along the corridor, through the doors.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Take the stairs in front of you.", 
+                    "subtitle": "Go down 1 flight of stairs and walk along the corridor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "At the end of the corridor go up 2 flights of stairs.", 
+                    "subtitle": "Turn right and right again.", 
+                    "image_url": imageUrl
+                    },
+                                        {
+                    "title": "Walk along the corridor.", 
+                    "subtitle": "C2.04 is the fourth door on your left.", 
                     "image_url": imageUrl
                     }
                 ]
