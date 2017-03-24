@@ -111,7 +111,7 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to T2.09") { 
             sendMessage(event.sender.id, {text: "Turn right and right again as you leave the room. Turn left and walk along the corridor. Take the stairs and go up to leavel 2.5. Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. T2.09 is just to your right."}); 
         }
-        else if (event.message && event.message.text === "I am at S2.21 and I want to go to N4.09") { 
+        else if (event.message && event.message.text === "I am at S2.21 and I want to go to N4.07") { 
             sendMessage(event.sender.id, {text: "Turn right and right again as you leave the room. Turn left and walk along the corridor. Take the stairs and go up to level 2.5. Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go up 4 flights. Turn left at the top of the stairs. N4.07 is at the top of the stairs."}); 
         } 
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to C2.04") { 
