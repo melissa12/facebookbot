@@ -736,10 +736,11 @@ function S221S132(recipientId, text) {
                      },
                                         {
                     "title": "Take the stairs down until you reach the first floor.",
+                    "subtitle": "Walk along this corridor.",
                     "image_url": imageUrl
                      },
                                         {
-                    "title": "Walk along this corridor and take the second right.", 
+                    "title": "Take the second right.", 
                     "subtitle": "S1.32 is just on your right.", 
                     "image_url": imageUrl 
                      }, 
