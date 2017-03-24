@@ -560,7 +560,7 @@ function canteenC207(recipientId, text) {
                 "elements": [
                     {
                     "title": "Take the stairs in front of you.",
-                    "subtitle": "Go up 3 flight.",
+                    "subtitle": "Go up 3 flights.",
                     "image_url": imageUrl
                      },
                                         {
@@ -596,7 +596,7 @@ function canteenC204(recipientId, text) {
                 "elements": [
                     {
                     "title": "Take the stairs in front of you.",
-                    "subtitle": "Go up 3 flight.",
+                    "subtitle": "Go up 3 flights.",
                     "image_url": imageUrl
                      },
                                         {
