@@ -276,6 +276,21 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at T2.07 and I want to go to C2.04") { 
             T207C204(event.sender.id, {text: "Here"}); 
         }
+        else if (event.message && event.message.text === "I am at T2.07 and I want to go to C2.07") { 
+            T207C207(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at T2.07 and I want to go to S2.22") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave T2.07. Walk along this corridor, through the double doors. Take the stairs in front of you down 1 flight. Walk along this corridor. At the end of this corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the second floor. Walk along this corridor. S2.22 is the second door on your right."}); 
+        }
+        else if (event.message && event.message.text === "I am at T2.07 and I want to go to S2.21") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave T2.07. Walk along this corridor, through the double doors. Take the stairs in front of you down 1 flight. Walk along this corridor. At the end of this corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the second floor. Walk along the corridor and take the third right. Turn left. S2.21 is the first door on your left."}); 
+        }
+        else if (event.message && event.message.text === "I am at T2.07 and I want to go to S1.32") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave T2.07. Walk along this corridor, through the double doors. Take the stairs in front of you down 1 flight. Walk along this corridor. At the end of this corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the first floor. Walk along this corridor and take the second right. S1.32 is just on your right"}); 
+        }
+        else if (event.message && event.message.text === "I am at T2.07 and I want to go to N4.07") { 
+            T207N407(event.sender.id, {text: "Here"}); 
+        }
         
     }
     res.sendStatus(200);
@@ -2266,6 +2281,79 @@ function T207C204(recipientId, text) {
                                         {
                     "title": "Walk along the corridor.", 
                     "subtitle": "C2.04 is the fourth door on your left.", 
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function T207C207(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave T2.07, turn left.",
+                    "subtitle": "Walk along the corridor, through the doors.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Take the stairs in front of you.", 
+                    "subtitle": "Go down 1 flight of stairs and walk along the corridor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "At the end of the corridor go up 2 flights of stairs.", 
+                    "subtitle": "Turn right and right again.", 
+                    "image_url": imageUrl
+                    },
+                                        {
+                    "title": "Walk along the corridor.", 
+                    "subtitle": "C2.07 is the seventh door on your left.", 
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function T207N407(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave T2.07, turn left.",
+                    "subtitle": "Walk along the corridor, through the doors.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Take the stairs in front of you.", 
+                    "subtitle": "Go down 1 flight of stairs and walk along the corridor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "At the end of the corridor take the stairs to the top floor.", 
+                    "subtitle": "Turn left at the top of the stairs.", 
+                    "image_url": imageUrl
+                    },
+                                        {
+                    "title": "N4.07 is at the top of the stairs.", 
                     "image_url": imageUrl
                     }
                 ]
