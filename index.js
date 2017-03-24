@@ -85,7 +85,7 @@ app.post('/webhook', function (req, res) {
             libraryC207(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to S2.21") { 
-            sendMessage(event.sender.id, {text: "As you exit the library take the stairs to your left and go up 1 flight. Turn right and walk along the corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Go down the stairs until you reach the second floor. Walk along the corriodr and take the third right. Turn left. S2.21 is the first door on your left."}); 
+            sendMessage(event.sender.id, {text: "As you exit the library take the stairs to your left and go up 1 flight. Turn right and walk along the corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Go down the stairs until you reach the second floor. Walk along the corridor and take the third right. Turn left. S2.21 is the first door on your left."}); 
         }
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to the toilet") { 
             S221Toilet(event.sender.id, {text: "Here"}); 
