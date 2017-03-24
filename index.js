@@ -171,6 +171,12 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at C2.04 and I want to go to S2.21") { 
             sendMessage(event.sender.id, {text: "Turn left as you leave the room. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the second floor. Walk along the corridor and take the third right. Turn left. S2.21 is the first door on your left."}); 
         }
+        else if (event.message && event.message.text === "I am at C2.04 and I want to go to N4.07") { 
+            C204N407(event.sender.id, {text: "Here"}); 
+        } 
+        else if (event.message && event.message.text === "I am at C2.04 and I want to go to S1.32") { 
+            C204S132(event.sender.id, {text: "Here"}); 
+        } 
             
     }
     res.sendStatus(200);
@@ -1190,6 +1196,74 @@ function C204S222(recipientId, text) {
                                         {
                     "title": "Walk along the corridor.", 
                     "subtitle": "It's the second door on your right.", 
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function C204N407(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn right as you leave the room.",
+                    "subtitle": "Walk to the end of the corridor and turn left.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn left and take the stairs.", 
+                    "subtitle": "Go up to the top.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn left at the top of the stairs.", 
+                    "subtitle": "N4.07 is at the top of the stairs.", 
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function C204S132(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn left as you leave the room.",
+                    "subtitle": "Walk to the end of the corridor and turn right.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn left and go up 1 flight of stairs.", 
+                    "subtitle": "Turn left and go down the stairs to the first floor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Walk along this corridor.", 
+                    "subtitle": "Take the second right.", 
+                    "image_url": imageUrl
+                    },
+                                        {
+                    "title": "S1.32 is just on your right.", 
                     "image_url": imageUrl
                     }
                 ]
