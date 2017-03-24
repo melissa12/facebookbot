@@ -195,6 +195,12 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at C2.07 and I want to go to C2.04") { 
             C207C204(event.sender.id, {text: "Here"}); 
         }
+        else if (event.message && event.message.text === "I am at C2.07 and I want to go to S2.22") { 
+            C207S222(event.sender.id, {text: "Here"}); 
+        } 
+        else if (event.message && event.message.text === "I am at C2.07 and I want to go to S2.21") { 
+            C207S221(event.sender.id, {text: "Here"}); 
+        }
             
     }
     res.sendStatus(200);
@@ -1481,6 +1487,79 @@ function C207C204(recipientId, text) {
                     "title": "C2.04 is the third door on your right.", 
                     "image_url": imageUrl
                      }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function C207S222(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn left as you leave the room.",
+                    "subtitle": "At the end of the corridor turn right.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn let and go up 1 flight of stairs.", 
+                    "subtitle": "Turn left and take the stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        { 
+                    "title": "Go down to the second floor.", 
+                    "subtitle": "Walk along this corridor.",
+                    "image_url": imageUrl
+                    },
+                                        {
+                    "title": "S2.22 is the second door on your right.",
+                    "image_url": imageUrl
+                    },
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function C207S221(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn left as you leave the room.",
+                    "subtitle": "At the end of the corridor turn right.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn let and go up 1 flight of stairs.", 
+                    "subtitle": "Turn left and take the stairs.", 
+                    "image_url": imageUrl
+                     },
+                                        { 
+                    "title": "Go down to the second floor.", 
+                    "subtitle": "Walk along this corridor and take the third right.",
+                    "image_url": imageUrl
+                    },
+                                        {
+                    "title": "Turn left.",
+                    "subtitle": "S2.21 is the first door on your left.", 
+                    "image_url": imageUrl
+                    },
                 ]
             }
         }
