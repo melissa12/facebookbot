@@ -1078,7 +1078,7 @@ function C204T207(recipientId, text) {
                      },
                                         {
                     "title": "Go through the doors in front of you.", 
-                    "subtitle": "Walk along the corridor. It's the second door on your right.",
+                    "subtitle": "T2.07 is the second door on your right.",
                     "image_url": imageUrl
                     }
                 ]
