@@ -361,7 +361,7 @@ function canteenToilet(recipientId, text) {
                 "elements": [
                     {
                     "title": "Walk towards the JCR and turn right.",  
-                    "image_url": "https://www.flickr.com/photos/153367335@N05/33572703311/in/photostream/"
+                    "image_url": "http://media.photobucket.com/user/r4e3w2q1maio/media/LogoUP_zps9nelgduk.jpg.html?filters[recentUploads]=recentUploads&filters[media_type]=image&sort=1&o=1"
                      },
                     
                                         {
