@@ -178,7 +178,7 @@ app.post('/webhook', function (req, res) {
             C204S132(event.sender.id, {text: "Here"}); 
         } 
         else if (event.message && event.message.text === "I am at C2.07 and I want to go to the toilet") { 
-            C204Toilet(event.sender.id, {text: "Here"}); 
+            C207Toilet(event.sender.id, {text: "Here"}); 
         } 
         else if (event.message && event.message.text === "I am at C2.07 and I want to go to the canteen") { 
             C207Canteen(event.sender.id, {text: "Here"}); 
@@ -291,6 +291,40 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at T2.07 and I want to go to N4.07") { 
             T207N407(event.sender.id, {text: "Here"}); 
         }
+        else if (event.message && event.message.text === "I am at N4.07 and I want to go to the toilet") { 
+            N407Toilet(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at S1.32 and I want to go to the toilet") { 
+            S132Toilet(event.sender.id, {text: "Here"}); 
+        } 
+        else if (event.message && event.message.text === "I am at S1.32 and I want to go to the canteen") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up the stairs to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 3 flights of stairs. The canteen is to your right."}); 
+        }
+        else if (event.message && event.message.text === "I am at S1.32 and I want to go to the library") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up the stairs to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 1 flight of stairs. The library is just in front of you."}); 
+        }
+        else if (event.message && event.message.text === "I am at S1.32 and I want to go to T2.07") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up the stairs to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. Go through the door in front of you. Walk along the corridor. It's the second door on your right."}); 
+        }
+        else if (event.message && event.message.text === "I am at S1.32 and I want to go to T2.09") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up the stairs to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. T2.09 is just to your right."}); 
+        } 
+        else if (event.message && event.message.text === "I am at S1.32 and I want to go to C2.04") { 
+            S132C204(event.sender.id, {text:"Here"}); 
+        } 
+        else if (event.message && event.message.text === "I am at S1.32 and I want to go to C2.07") { 
+            S132C207(event.sender.id, {text: "Here"}); 
+        } 
+        else if (event.message && event.message.text === "I am at S1.32 and I want to go to N4.07") { 
+            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up the stairs to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go up 4 flights. Turn left at the top of the stairs. The door is at the top of the stairs. "}); 
+        } 
+        else if (event.message && event.message.text === "I am at S1.32 and I want to go to S2.21") { 
+            S132S221(event.sender.id, {text: "Here"}); 
+        }
+        else if (event.message && event.message.text === "I am at S1.32 and I want to go to S2.22") { 
+            S132S222(event.sender.id, {text: "Here"}); 
+        }
+            
         
     }
     res.sendStatus(200);
@@ -2356,6 +2390,194 @@ function T207N407(recipientId, text) {
                     "title": "N4.07 is at the top of the stairs.", 
                     "image_url": imageUrl
                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function N407Toilet(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave N4.07, go down the stairs.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "It's the first door on your left.", 
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function S132Toilet(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave S1.32, turn left.",
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn right and walk along the corridor.", 
+                    "subtitle": "It's the sixth door on your left.", 
+                    "image_url": imageUrl
+                     }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function S132C204(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave S1.32 turn left and left again.",
+                    "subtitle": "Walk along this corridor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "At the end of the corridor take the stairs.", 
+                    "subtitle": "Go up the stairs to floor 2.5.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn right and go down 1 flight of stairs",
+                    "subtitle": "Turn right, then left.", 
+                    "image_url": imageUrl 
+                    }, 
+                                        {
+                    "title": "Walk along this corridor.", 
+                    "subtitle": "It's the fifth door on your right.", 
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function S132C207(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "As you leave S1.32 turn left and left again.",
+                    "subtitle": "Walk along this corridor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "At the end of the corridor take the stairs.", 
+                    "subtitle": "Go up the stairs to floor 2.5.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Turn right and go down 1 flight of stairs",
+                    "subtitle": "Turn right, then left.", 
+                    "image_url": imageUrl 
+                    }, 
+                                        {
+                    "title": "Walk along this corridor.", 
+                    "subtitle": "It's the second door on your right.", 
+                    "image_url": imageUrl
+                    }
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function S132S221(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn left as you leave S1.32 and left again.",
+                    "subtitle": "Walk along this corridor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Take the stairs up to the second floor.", 
+                    "subtitle": "Walk along the corridor and take the third right.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                     "title": "Turn left.", 
+                     "subtitle": "S2.21 is the first door on your left.", 
+                     "image_url": imageUrl
+                     } 
+                ]
+            }
+        }
+    };
+    sendMessage(recipientId, message);
+};
+
+
+function S132S222(recipientId, text) { 
+    var imageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/16465567_737180996447784_7352930134682238976_n.jpg";
+    message = { 
+        "attachment": {
+            "type": "template",
+            "payload": { 
+                "template_type": "list", 
+                "top_element_style": "compact",
+                "elements": [
+                    {
+                    "title": "Turn left as you leave S1.32 and left again.",
+                    "subtitle": "Walk along this corridor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "Take the stairs up to the second floor.", 
+                    "subtitle": "Walk along the corridor.", 
+                    "image_url": imageUrl
+                     },
+                                        {
+                    "title": "S2.22 is the second door on your right.", 
+                    "image_url": imageUrl
+                     }, 
                 ]
             }
         }
