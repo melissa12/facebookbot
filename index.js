@@ -1866,7 +1866,7 @@ function N407C204(recipientId, text) {
                                         { 
                     "title": "Walk along this corridor.", 
                     "subtitle": "C2.04 is the fourth door on your left.",
-                    "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17439000_1653569318272959_6790133369859473408_n.jpg"
+                    "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17596680_1117488568380551_5783131454988877824_n.jpg"
                     }
                 ]
             }
