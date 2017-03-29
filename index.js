@@ -2283,7 +2283,7 @@ function T207C207(recipientId, text) {
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17587298_1266800156735408_5996845226591780864_n.jpg"
                      },
                                         {
-                    "title": "At the end of the corridor go up 2 flights of stairs.", 
+                    "title": "Go up 2 flights of stairs.", 
                     "subtitle": "Turn right and right again.", 
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17438912_1929551643946226_9097575816304263168_n.jpg"
                     },
