@@ -568,11 +568,11 @@ function libraryT207(recipientId, text) {
                     "title": "Go through the door in front of you.",
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17596680_1117488568380551_5783131454988877824_n.jpg"
                      },
-                                                            {
+                                        {
                     "title": "Walk along this corridor.",
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17596680_1117488568380551_5783131454988877824_n.jpg"
                      },
-                                                            {
+                                        {
                     "title": "It's the second door on your right.",
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17437634_1659105941065661_285727849032187904_n.jpg"
                      }
@@ -592,7 +592,7 @@ function libraryN407(recipientId, text) {
                 "template_type": "list", 
                 "top_element_style": "compact",
                 "elements": [
-                    {
+                     {
                     "title": "Exit the library, take the stairs to your left.",
                     "subtitle": "Go up 1 flight.",
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17587298_1266800156735408_5996845226591780864_n.jpg"
@@ -601,12 +601,12 @@ function libraryN407(recipientId, text) {
                     "title": "Turn right and walk along the corridor.",
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17437634_1659105941065661_285727849032187904_n.jpg"
                      },
-                                                            {
+                                        {
                     "title": "At the end of the corridor take the stairs.",
                     "subtitle": "Go up 6 flights.", 
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17661909_1878164182399654_7139361378355118080_n.jpg"
                      },
-                                                            {
+                                        {
                     "title": "Turn left at the top of the stairs.",
                     "subtitle": "The door is at the top of the stairs.", 
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17493615_345303762531778_711606021440667648_n.jpg"
