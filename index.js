@@ -360,12 +360,12 @@ function canteenToilet(recipientId, text) {
                 "elements": [
                     {
                     "title": "Walk towards the JCR and turn right.",  
-                    "image_url": ""
+                    "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17437634_1659105941065661_285727849032187904_n.jpg"
                      },
                     
                                         {
                     "title": "The toilets are just on your left.",  
-                    "image_url": ""
+                    "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17493615_345303762531778_711606021440667648_n.jpg"
                      }
                 ]
             }
@@ -385,22 +385,22 @@ function canteenT207(recipientId, text) {
                     {
                     "title": "Take the stairs that are in front of you.",
                     "subtitle": "Go up 4 flights.",  
-                    "image_url": ""
+                    "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17439000_1653569318272959_6790133369859473408_n.jpg"
                      },
                     
                                         {
                     "title": "Go through the door in front of you.",  
-                    "image_url": ""
+                    "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17596680_1117488568380551_5783131454988877824_n.jpg"
                      },
                     
                                         {
                     "title": "Walk along the corridor.",  
-                    "image_url": ""
+                    "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17596680_1117488568380551_5783131454988877824_n.jpg"
                      },
                     
                     {
                     "title": "It's the second door on your right.",  
-                        "image_url": ""
+                        "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17437634_1659105941065661_285727849032187904_n.jpg"
                     }
                 ]
             }
@@ -421,13 +421,13 @@ function canteenLibrary(recipientId, text) {
                     {
                     "title": "Take the stairs that are in front of you.",
                     "subtitle": "Go up 2 flights.",  
-                    "image_url": ""
+                    "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17438912_1929551643946226_9097575816304263168_n.jpg"
                      },
                     
                                         {
                     "title": "Go through the door to the right of you.",  
                     "subtitle": "This is the library.",       
-                    "image_url": ""
+                    "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17437634_1659105941065661_285727849032187904_n.jpg"
                      }                 
                 ]
             }
