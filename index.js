@@ -562,7 +562,7 @@ function libraryT207(recipientId, text) {
                     {
                     "title": "As you exit the library take the stairs.",
                     "subtitle": "Go up 2 flights.",
-                    "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17437634_1659105941065661_285727849032187904_n.jpg"
+                    "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17438912_1929551643946226_9097575816304263168_n.jpg"
                      },
                                         {
                     "title": "Go through the door in front of you.",
