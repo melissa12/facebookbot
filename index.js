@@ -24,7 +24,10 @@ app.post('/webhook', function (req, res) {
     var events = req.body.entry[0].messaging;
     for (i = 0; i < events.length; i++) {
         var event = events[i];
-        if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.07"){
+        if(event.message && event.message.text === "Help"){
+            sendMessage(event.sender.id, {text: "If you're lost and in need of some directions just tell us where you are and where you want to go. For example, 'I am at T2.07 and I want to go to C2.04'."});
+        }
+        else if (event.message && event.message.text === "I am at T2.09 and I want to go to C2.07"){
             T209C207(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to the toilet") {
