@@ -49,16 +49,16 @@ app.post('/webhook', function (req, res) {
             canteenC207(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S1.32") {
-            sendMessage(event.sender.id, {text: "Take the stairs in front of you (Go up 3 flights). Turn right and walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Go down the stairs to the first floor. Walk along this corridor and take the second right. The door is just on your right."});
+            sendMessage(event.sender.id, {text: "Take the stairs in front of you (Go up 3 flights). Turn right and walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 5 flights of stairs to the first floor. Walk along the corridor to your right and take the second right. The door is just on your right."});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.22") {
-            sendMessage(event.sender.id, {text: "Take the stairs in front of you (Go up 3 flights). Turn right and walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Then go down the stairs until you reach the second floor. Walk along this corridor. It's the second door on your right."});            
+            sendMessage(event.sender.id, {text: "Take the stairs in front of you (Go up 3 flights). Turn right and walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 2 flights of stairs to the second floor. Walk along the corridor to your right. It's the second door on your right."});            
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to N4.07") {
             canteenN407(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.21") {
-            sendMessage(event.sender.id, {text: "Take the stairs in front of you. Go up 3 flights. Turn right and walk along the corridor. At the end of the corridor take the stairs and go up 2 flights. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Go down the stairs until you reach the second floor. Walk along the corridor and take the 3rd right. Turn left. The door is the first door on your left."});
+            sendMessage(event.sender.id, {text: "Take the stairs in front of you. Go up 3 flights. Turn right and walk along the corridor. At the end of the corridor take the stairs and go up 2 flights. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 2 flights of stairs to the second floor. Walk along the corridor to your right and take the 3rd right. Turn left. The door is the first door on your left."});
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to the canteen") {
             libraryCanteen(event.sender.id, {text: "Here"}); 
@@ -70,7 +70,7 @@ app.post('/webhook', function (req, res) {
             libraryT207(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to S1.32") {
-            sendMessage(event.sender.id, {text: "As you exit the library take the stairs to your left up 1 flight. Turn right and walk along the corridor. At the end of the corridor go up 2 flights. Turn right and right again. Walk along this corridor. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Go down the stairs until you reach the first floor. Walk along this corridor. Take the second right. The door is just on your right."});
+            sendMessage(event.sender.id, {text: "As you exit the library take the stairs to your left up 1 flight. Turn right and walk along the corridor. At the end of the corridor go up 2 flights. Turn right and right again. Walk along this corridor. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 5 flights of stairs to the first floor. Walk along the corridor to your right. Take the second right. The door is just on your right."});
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to N4.07") {
             libraryN407(event.sender.id, {text: "Here"}); 
@@ -79,7 +79,7 @@ app.post('/webhook', function (req, res) {
             libraryT209(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to S2.22") { 
-            sendMessage(event.sender.id, {text: "As you exit the library take the stairs to your left and go up 1 flight. Turn right and walk along the corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Go down the stairs until you reach the second floor. Walk along this corridor. It's the second door on your right."});
+            sendMessage(event.sender.id, {text: "As you exit the library take the stairs to your left and go up 1 flight. Turn right and walk along the corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 2 flights of stairs to the second floor. Walk along the corridor to your right. It's the second door on your right."});
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to C2.04") { 
            libraryC204(event.sender.id, {text: "Here"}); 
@@ -88,16 +88,16 @@ app.post('/webhook', function (req, res) {
             libraryC207(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the library and I want to go to S2.21") { 
-            sendMessage(event.sender.id, {text: "As you exit the library take the stairs to your left and go up 1 flight. Turn right and walk along the corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Go down the stairs until you reach the second floor. Walk along the corridor and take the third right. Turn left. S2.21 is the first door on your left."}); 
+            sendMessage(event.sender.id, {text: "As you exit the library take the stairs to your left and go up 1 flight. Turn right and walk along the corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 2 flights of stairs to the second floor. Walk along the corridor to your right and take the third right. Turn left. S2.21 is the first door on your left."}); 
         }
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to the toilet") { 
             S221Toilet(event.sender.id, {text: "Here"}); 
         } 
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to the canteen") { 
-            sendMessage(event.sender.id, {text: "Turn right as you leave the room, then right again. Turn left and walk along the corridor. Take the stairs up to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 3 flights of stairs. The canteen is to your right."}); 
+            sendMessage(event.sender.id, {text: "Turn right as you leave the room, then right again. Turn left and walk along the corridor. Take the stairs (Go up 2 flights). Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 3 flights of stairs. The canteen is to your right."}); 
         } 
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to the library") { 
-            sendMessage(event.sender.id, {text: "Turn right as you leave the room, then right again. Turn left and walk along the corridor. Take the stairs up to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 1 flights of stairs. The library is just in front of you."}); 
+            sendMessage(event.sender.id, {text: "Turn right as you leave the room, then right again. Turn left and walk along the corridor. Take the stairs (Go up 2 flights). Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 1 flights of stairs. The library is just in front of you."}); 
         }
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to S2.22") { 
             S221S222(event.sender.id, {text: "Here"}); 
@@ -106,16 +106,16 @@ app.post('/webhook', function (req, res) {
             S221C207(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to T2.07") { 
-            sendMessage(event.sender.id, {text: "Turn right as you leave the room and then right again. Turn left and walk along the corridor. Take the stairs up to level 2.5. Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. Go through the door in front of you. Walk along the corridor. T2.07 is the second door on your right."}); 
+            sendMessage(event.sender.id, {text: "Turn right as you leave the room and then right again. Turn left and walk along the corridor. Take the stairs (Go up 2 flights). Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. Go through the door in front of you. Walk along the corridor. T2.07 is the second door on your right."}); 
         }
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to S1.32") { 
             S221S132(event.sender.id, {text: "Here"}); 
         } 
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to T2.09") { 
-            sendMessage(event.sender.id, {text: "Turn right and right again as you leave the room. Turn left and walk along the corridor. Take the stairs and go up to leavel 2.5. Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. T2.09 is just to your right."}); 
+            sendMessage(event.sender.id, {text: "Turn right and right again as you leave the room. Turn left and walk along the corridor. Take the stairs (Go up 2 flights). Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. T2.09 is just to your right."}); 
         }
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to N4.07") { 
-            sendMessage(event.sender.id, {text: "Turn right and right again as you leave the room. Turn left and walk along the corridor. Take the stairs and go up to level 2.5. Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go up 4 flights. Turn left at the top of the stairs. N4.07 is at the top of the stairs."}); 
+            sendMessage(event.sender.id, {text: "Turn right and right again as you leave the room. Turn left and walk along the corridor. Take the stairs (Go up 2 flights). Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go up 4 flights. Turn left at the top of the stairs. N4.07 is at the top of the stairs."}); 
         } 
         else if (event.message && event.message.text === "I am at S2.21 and I want to go to C2.04") { 
             S221C204(event.sender.id, {text: "Here"}); 
@@ -124,10 +124,10 @@ app.post('/webhook', function (req, res) {
             S222Toilet(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at S2.22 and I want to go to the canteen") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs and go up to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 3 flights of stairs. The canteen is to your right."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs (Go up 2 flights). Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 3 flights of stairs. The canteen is to your right."}); 
         }
         else if (event.message && event.message.text === "I am at S2.22 and I want to go to the library") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs and go up to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 1 flight of stairs. The library is just in front of you."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs (Go up 2 flights). Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 1 flight of stairs. The library is just in front of you."}); 
         } 
         else if (event.message && event.message.text === "I am at S2.22 and I want to go to S2.21") { 
             S222S221(event.sender.id, {text: "Here"}); 
@@ -136,16 +136,16 @@ app.post('/webhook', function (req, res) {
             S222C207(event.sender.id, {text: "Here"}); 
         } 
         else if (event.message && event.message.text === "I am at S2.22 and I want to go to T2.07") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs and go up to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. Go through the door in front of you. Walk along the corridor. It's the second door on your right."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs (Go up 2 flights). Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. Go through the door in front of you. Walk along the corridor. It's the second door on your right."}); 
         }
         else if (event.message && event.message.text === "I am at S2.22 and I want to go to S1.32") { 
             S222S132(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at S2.22 and I want to go to T2.09") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs and go up to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. T2.09 is just to your right."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs (Go up 2 flights). Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. T2.09 is just to your right."}); 
         }
         else if (event.message && event.message.text === "I am at S2.22 and I want to go to N4.07") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs and go up to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go up 4 flights. Turn left at the top of the stairs. The door is at the top of the stairs. "}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave the room and walk along the corridor. Take the stairs (Go up 2 flights). Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go up 4 flights. Turn left at the top of the stairs. The door is at the top of the stairs. "}); 
         }
         else if (event.message && event.message.text === "I am at S2.22 and I want to go to C2.04") { 
             S222C204(event.sender.id, {text: "Here"}); 
@@ -172,7 +172,7 @@ app.post('/webhook', function (req, res) {
             C204S222(event.sender.id, {text: "Here"}); 
         } 
         else if (event.message && event.message.text === "I am at C2.04 and I want to go to S2.21") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave the room. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the second floor. Walk along the corridor and take the third right. Turn left. S2.21 is the first door on your left."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave the room. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 2 flights of stairs to the second floor. Walk along the corridor to your right and take the third right. Turn left. S2.21 is the first door on your left."}); 
         }
         else if (event.message && event.message.text === "I am at C2.04 and I want to go to N4.07") { 
             C204N407(event.sender.id, {text: "Here"}); 
@@ -229,13 +229,13 @@ app.post('/webhook', function (req, res) {
             N407C207(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at N4.07 and I want to go to S2.22") { 
-            sendMessage(event.sender.id, {text: "Go down 1 flight of stairs and turn right. Go down 4 flights of stairs. Turn right and right again. Walk along this corridor. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and take the stairs down to the second floor. Walk along this corridor. S2.22 is the second door on your right."}); 
+            sendMessage(event.sender.id, {text: "Go down 1 flight of stairs and turn right. Go down 4 flights of stairs. Turn right and right again. Walk along this corridor. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 2 flights of stairs to the second floor. Walk along the corridor to your right. S2.22 is the second door on your right."}); 
         } 
         else if (event.message && event.message.text === "I am at N4.07 and I want to go to S2.21") { 
-            sendMessage(event.sender.id, {text: "Go down 1 flight of stairs and turn right. Go down 4 flights of stairs. Turn right and right again. Walk along this corridor. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and take the stairs down to the second floor. Walk along the corridor and take the third right. Turn left. S2.21 is the first door on your left."}); 
+            sendMessage(event.sender.id, {text: "Go down 1 flight of stairs and turn right. Go down 4 flights of stairs. Turn right and right again. Walk along this corridor. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 2 flights of stairs to the second floor. Walk along the corridor to your right and take the third right. Turn left. S2.21 is the first door on your left."}); 
         }
         else if (event.message && event.message.text === "I am at N4.07 and I want to go to S1.32") { 
-            sendMessage(event.sender.id, {text: "Go down 1 flight of stairs and turn right. Go down 4 flights of stairs. Turn right and right again. Walk along this corridor. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and take the stairs down to the first floor. Walk along the corridor and take the second right. S1.32 is just on your right."}); 
+            sendMessage(event.sender.id, {text: "Go down 1 flight of stairs and turn right. Go down 4 flights of stairs. Turn right and right again. Walk along this corridor. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 5 flights of stairs to the first floor. Walk along the corridor to your right and take the second right. S1.32 is just on your right."}); 
         }
         else if (event.message && event.message.text === "I am at T2.09 and I want to go to the toilet") { 
             T209Toilet(event.sender.id, {text: "Here"}); 
@@ -253,13 +253,13 @@ app.post('/webhook', function (req, res) {
             T209C204(event.sender.id, {text: "Here"}); 
         } 
         else if (event.message && event.message.text === "I am at T2.09 and I want to go to S2.22") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave T2.09 and take the stairs. Go down 1 flight of stairs. Walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the second floor. Walk along this corridor. S2.22 is the second door on your right."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave T2.09 and take the stairs. Go down 1 flight of stairs. Walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 2 flights of stairs to the second floor. Walk along the corridor to your right. S2.22 is the second door on your right."}); 
         }
         else if (event.message && event.message.text === "I am at T2.09 and I want to go to S2.21") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave T2.09 and take the stairs. Go down 1 flight of stairs. Walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the second floor. Walk along the corridor and take the third right. Turn left. S2.21 is the first door on your left."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave T2.09 and take the stairs. Go down 1 flight of stairs. Walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 2 flights of stairs to the second floor. Walk along the corridor to your right and take the third right. Turn left. S2.21 is the first door on your left."}); 
         }
         else if (event.message && event.message.text === "I am at T2.09 and I want to go to S1.32") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave T2.09 and take the stairs. Go down 1 flight of stairs. Walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the first floor. Walk along this corridor and take the second right. S1.32 is just on your right."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave T2.09 and take the stairs. Go down 1 flight of stairs. Walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 5 flights of stairs to the first floor. Walk along the corridor to your right and take the second right. S1.32 is just on your right."}); 
         }
         else if (event.message && event.message.text === "I am at T2.09 and I want to go to N4.07") { 
             T209N407(event.sender.id, {text: "Here"}); 
@@ -283,13 +283,13 @@ app.post('/webhook', function (req, res) {
             T207C207(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at T2.07 and I want to go to S2.22") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave T2.07. Walk along this corridor, through the double doors. Take the stairs in front of you down 1 flight. Walk along this corridor. At the end of this corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the second floor. Walk along this corridor. S2.22 is the second door on your right."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave T2.07. Walk along this corridor, through the double doors. Take the stairs in front of you down 1 flight. Walk along this corridor. At the end of this corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 2 flights of stairs to the second floor. Walk along the corridor to your right. S2.22 is the second door on your right."}); 
         }
         else if (event.message && event.message.text === "I am at T2.07 and I want to go to S2.21") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave T2.07. Walk along this corridor, through the double doors. Take the stairs in front of you down 1 flight. Walk along this corridor. At the end of this corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the second floor. Walk along the corridor and take the third right. Turn left. S2.21 is the first door on your left."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave T2.07. Walk along this corridor, through the double doors. Take the stairs in front of you down 1 flight. Walk along this corridor. At the end of this corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 2 flights of stairs to the second floor. Walk along the corridor to your right and take the third right. Turn left. S2.21 is the first door on your left."}); 
         }
         else if (event.message && event.message.text === "I am at T2.07 and I want to go to S1.32") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave T2.07. Walk along this corridor, through the double doors. Take the stairs in front of you down 1 flight. Walk along this corridor. At the end of this corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down the stairs until you reach the first floor. Walk along this corridor and take the second right. S1.32 is just on your right"}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave T2.07. Walk along this corridor, through the double doors. Take the stairs in front of you down 1 flight. Walk along this corridor. At the end of this corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 5 flights of stairs to the first floor. Walk along the corridor to your right and take the second right. S1.32 is just on your right"}); 
         }
         else if (event.message && event.message.text === "I am at T2.07 and I want to go to N4.07") { 
             T207N407(event.sender.id, {text: "Here"}); 
@@ -301,16 +301,16 @@ app.post('/webhook', function (req, res) {
             S132Toilet(event.sender.id, {text: "Here"}); 
         } 
         else if (event.message && event.message.text === "I am at S1.32 and I want to go to the canteen") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up the stairs to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 3 flights of stairs. The canteen is to your right."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up 5 flights. Turn right and go down 1 flight of stairs. Turn right, then left, and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 3 flights of stairs. The canteen is to your right."}); 
         }
         else if (event.message && event.message.text === "I am at S1.32 and I want to go to the library") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up the stairs to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 1 flight of stairs. The library is just in front of you."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up 5 flights. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go down 1 flight of stairs. The library is just in front of you."}); 
         }
         else if (event.message && event.message.text === "I am at S1.32 and I want to go to T2.07") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up the stairs to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. Go through the door in front of you. Walk along the corridor. It's the second door on your right."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up 5 flights. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. Go through the door in front of you. Walk along the corridor. It's the second door on your right."}); 
         }
         else if (event.message && event.message.text === "I am at S1.32 and I want to go to T2.09") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up the stairs to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. T2.09 is just to your right."}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up 5 flights. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go down 2 flights. Walk along the corridor. At the end of the corridor go up 1 flight of stairs. T2.09 is just to your right."}); 
         } 
         else if (event.message && event.message.text === "I am at S1.32 and I want to go to C2.04") { 
             S132C204(event.sender.id, {text:"Here"}); 
@@ -319,7 +319,7 @@ app.post('/webhook', function (req, res) {
             S132C207(event.sender.id, {text: "Here"}); 
         } 
         else if (event.message && event.message.text === "I am at S1.32 and I want to go to N4.07") { 
-            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up the stairs to floor 2.5. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go up 4 flights. Turn left at the top of the stairs. The door is at the top of the stairs. "}); 
+            sendMessage(event.sender.id, {text: "Turn left as you leave S1.32, and turn left again. Walk along the corridor. At the end of the corridor take the stairs. Go up 5 flights. Turn right and go down 1 flight of stairs. Turn right, then left and walk along the corridor. At the end of the corridor turn left. Take the stairs on your left and go up 4 flights. Turn left at the top of the stairs. The door is at the top of the stairs. "}); 
         } 
         else if (event.message && event.message.text === "I am at S1.32 and I want to go to S2.21") { 
             S132S221(event.sender.id, {text: "Here"}); 
@@ -859,7 +859,7 @@ function S221C207(recipientId, text) {
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17437634_1659105941065661_285727849032187904_n.jpg"
                      },
                                         {
-                    "title": "Take the stairs and go up to floor 2.5.",
+                    "title": "Take the stairs (Go up 2 flights).",
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17662364_1907648566138749_2373170495638994944_n.jpg"
                      },
                                         {
@@ -897,8 +897,8 @@ function S221S132(recipientId, text) {
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17493615_345303762531778_711606021440667648_n.jpg"
                      },
                                         {
-                    "title": "Take the stairs down until you reach the first floor.",
-                    "subtitle": "Walk along this corridor.",
+                    "title": "Take the stairs (Go down 3 flights).",
+                    "subtitle": "Walk along the corridor to your right.",
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17662364_1907648566138749_2373170495638994944_n.jpg"
                      },
                                         {
@@ -929,7 +929,7 @@ function S221C204(recipientId, text) {
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17437634_1659105941065661_285727849032187904_n.jpg"
                      },
                                         {
-                    "title": "Take the stairs and go up to floor 2.5.",
+                    "title": "Take the stairs (Go up 2 flights).",
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17662364_1907648566138749_2373170495638994944_n.jpg"
                      },
                                         {
@@ -1013,7 +1013,7 @@ function S222C207(recipientId, text) {
                 "elements": [
                     {
                     "title": "Turn left and walk along the corridor.",
-                    "subtitle": "Take the stairs to level 2.5.",
+                    "subtitle": "Take the stairs (Go up 2 flights).",
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17493615_345303762531778_711606021440667648_n.jpg"
                      },
                                         {
@@ -1048,8 +1048,8 @@ function S222S132(recipientId, text) {
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17493615_345303762531778_711606021440667648_n.jpg"
                      },
                                         {
-                    "title": "Take stairs down to the first floor.",
-                    "subtitle": "Walk along this corridor.", 
+                    "title": "Take stairs (Go down 3 flights).",
+                    "subtitle": "Walk along the corridor to your right.", 
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17662364_1907648566138749_2373170495638994944_n.jpg"
                      },
                                         {
@@ -1078,7 +1078,7 @@ function S222C204(recipientId, text) {
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17493615_345303762531778_711606021440667648_n.jpg"
                      },
                                         {
-                    "title": "Take stairs up to floor 2.5.", 
+                    "title": "Take stairs (Go up 2 flights).", 
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17662364_1907648566138749_2373170495638994944_n.jpg"
                      },
                                         {
@@ -1310,7 +1310,7 @@ function C204S222(recipientId, text) {
                      },
                                         {
                     "title": "Turn left and take the stairs.", 
-                    "subtitle": "Go down the stairs until you reach the second floor.", 
+                    "subtitle": "Go down 2 flights of stairs to the second floor.", 
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17662364_1907648566138749_2373170495638994944_n.jpg"
                     },
                                         {
@@ -1372,11 +1372,11 @@ function C204S132(recipientId, text) {
                      },
                                         {
                     "title": "Turn left and go up 1 flight of stairs.", 
-                    "subtitle": "Turn left and go down the stairs to the first floor.", 
+                    "subtitle": "Turn left (Go down 5 flights of stairs).", 
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17587298_1266800156735408_5996845226591780864_n.jpg"
                      },
                                         {
-                    "title": "Walk along this corridor.", 
+                    "title": "Walk along the corridor to your right.", 
                     "subtitle": "Take the second right.", 
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17437634_1659105941065661_285727849032187904_n.jpg"
                     },
@@ -1602,8 +1602,8 @@ function C207S222(recipientId, text) {
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17587298_1266800156735408_5996845226591780864_n.jpg"
                      },
                                         { 
-                    "title": "Go down to the second floor.", 
-                    "subtitle": "Walk along this corridor.",
+                    "title": "Go down 2 flights of stairs.", 
+                    "subtitle": "Walk along the corridor to your right.",
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17587298_1266800156735408_5996845226591780864_n.jpg"
                     },
                                         {
@@ -1637,8 +1637,8 @@ function C207S221(recipientId, text) {
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17587298_1266800156735408_5996845226591780864_n.jpg"
                      },
                                         { 
-                    "title": "Go down to the second floor.", 
-                    "subtitle": "Walk along this corridor and take the third right.",
+                    "title": "Go down 2 flights of stairs.", 
+                    "subtitle": "Walk along the corridor to your right and take the third right.",
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17662364_1907648566138749_2373170495638994944_n.jpg"
                     },
                                         {
@@ -1673,8 +1673,8 @@ function C207S132(recipientId, text) {
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17587298_1266800156735408_5996845226591780864_n.jpg"
                      },
                                         { 
-                    "title": "Go down to the first floor.", 
-                    "subtitle": "Walk along this corridor and take the second right.",
+                    "title": "Go down 5 flights of stairs.", 
+                    "subtitle": "Walk along the corridor to your right and take the second right.",
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17662364_1907648566138749_2373170495638994944_n.jpg"
                     },
                                         {
@@ -2402,7 +2402,7 @@ function S132C204(recipientId, text) {
                      },
                                         {
                     "title": "At the end of the corridor take the stairs.", 
-                    "subtitle": "Go up the stairs to floor 2.5.", 
+                    "subtitle": "Go up 5 flights of stairs.", 
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17662364_1907648566138749_2373170495638994944_n.jpg"
                      },
                                         {
@@ -2438,7 +2438,7 @@ function S132C207(recipientId, text) {
                      },
                                         {
                     "title": "At the end of the corridor take the stairs.", 
-                    "subtitle": "Go up the stairs to floor 2.5.", 
+                    "subtitle": "Go up 5 flights of stairs.", 
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17662364_1907648566138749_2373170495638994944_n.jpg"
                      },
                                         {
@@ -2473,8 +2473,8 @@ function S132S221(recipientId, text) {
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17493615_345303762531778_711606021440667648_n.jpg"
                      },
                                         {
-                    "title": "Take the stairs up to the second floor.", 
-                    "subtitle": "Walk along the corridor and take the third right.", 
+                    "title": "Take the stairs (Go up 3 flights).", 
+                    "subtitle": "Walk along the corridor to your right and take the third right.", 
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17662364_1907648566138749_2373170495638994944_n.jpg"
                      },
                                         {
@@ -2504,8 +2504,8 @@ function S132S222(recipientId, text) {
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17493615_345303762531778_711606021440667648_n.jpg"
                      },
                                         {
-                    "title": "Take the stairs up to the second floor.", 
-                    "subtitle": "Walk along the corridor.", 
+                    "title": "Take the stairs (Go up 3 flights).", 
+                    "subtitle": "Walk along the corridor to your right.", 
                     "image_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/17662364_1907648566138749_2373170495638994944_n.jpg"
                      },
                                         {
