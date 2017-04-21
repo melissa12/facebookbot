@@ -327,7 +327,9 @@ app.post('/webhook', function (req, res) {
         else if (event.message && event.message.text === "I am at S1.32 and I want to go to S2.22") { 
             S132S222(event.sender.id, {text: "Here"}); 
         }
-            
+        else {
+            sendMessage(event.sender.id, {text: "I'm sorry, I don't understand. Type 'help' to learn how to interact with me."});
+        }
         
     }
     res.sendStatus(200);
