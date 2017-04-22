@@ -49,7 +49,7 @@ app.post('/webhook', function (req, res) {
             canteenC207(event.sender.id, {text: "Here"}); 
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S1.32") {
-            sendMessage(event.sender.id, {text: "Take the stairs in front of you (Go up 3 flights). Turn right and walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Go down the stairs to the first floor. Walk along this corridor and take the second right. The door is just on your right."});
+            sendMessage(event.sender.id, {text: "Take the stairs in front of you (Go up 3 flights). Turn right and walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Turn left and go down 5 flights of stairs. Walk along the corridor to your right and take the second right. The door is just on your right."});
         }
         else if (event.message && event.message.text === "I am at the canteen and I want to go to S2.22") {
             sendMessage(event.sender.id, {text: "Take the stairs in front of you (Go up 3 flights). Turn right and walk along this corridor. At the end of the corridor go up 2 flights of stairs. Turn right and right again. At the end of the corridor turn right. Turn left and go up 1 flight of stairs. Then go down the stairs until you reach the second floor. Walk along this corridor. It's the second door on your right."});            
