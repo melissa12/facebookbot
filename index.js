@@ -328,7 +328,7 @@ app.post('/webhook', function (req, res) {
             S132S222(event.sender.id, {text: "Here"}); 
         }
         else if (event.message) {
-            sendMessage(event.sender.id, {text: "I'm sorry, I don't understand! Type 'help to learn how to interact with me."}); 
+            sendMessage(event.sender.id, {text: "I'm sorry, I don't understand! Type 'help' to learn how to interact with me."}); 
         }
             
         
